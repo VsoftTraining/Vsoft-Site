@@ -117,7 +117,7 @@ const ClientLogoSlider = () => {
               fontWeight: 800,
               fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
               mb: 2,
-              background: 'linear-gradient(45deg, #2c3e50, #ffbd28)', // replaced purple with yellow
+              background: 'linear-gradient(45deg, #333333ff)', // replaced purple with yellow
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -130,7 +130,7 @@ const ClientLogoSlider = () => {
             sx={{
               width: 80,
               height: 4,
-              background: 'linear-gradient(40deg, #ffbd28, #2c3e50)',
+              background: 'linear-gradient(40deg, #ffbd28)',
               mx: 'auto',
               borderRadius: 2,
               mb: 3

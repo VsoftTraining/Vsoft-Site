@@ -20,7 +20,7 @@ const StepUpCloud = () => {
     return (
         <>
             <div className="main-content">
-                <Box sx={{ px: 2, py: 2 }}>
+                <Box sx={{ px: 2, py: 2 }}> 
                     <Breadcrumbs aria-label="breadcrumb" sx={{ mb: 3 }}>
                         <Link
                             underline="hover"

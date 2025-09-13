@@ -24,6 +24,7 @@ import FloatingIcons from './Animations/FloatingIcons';
 import Internship from './component/Internship';
 import StepUpSAP from './component/StepUpSAP';
 import StepUpCloud from './component/StepUpCloud'; 
+// import PromotionalPopup from './Animations/PromotionalPopup';
 // import Product from './component/Product';
 import PageTitleUpdater from './component/PageTitleUpdater';
 
@@ -105,6 +106,7 @@ function App() {
           {/* <Route path="/product" element={<Product />} /> */}
         </Routes>
         <FloatingIcons />
+        {/* <PromotionalPopup /> */}
         <Footer />
     </>
   );

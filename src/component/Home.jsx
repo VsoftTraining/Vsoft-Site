@@ -111,7 +111,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: '#ffbd28',
   color: '#000',
   padding: theme.spacing(1, 3),
-  borderRadius: '4px',
+  borderRadius: '5px',
   textTransform: 'uppercase',
   fontWeight: 600,
   '&:hover': {
@@ -257,24 +257,24 @@ const HomePage = () => {
     { title: 'Retailers', icon: 'https://cdn-icons-png.flaticon.com/512/3075/3075977.png' },
   ];
 
-  const provides = [
-    { title: 'Career', icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png' },
-    { title: 'Fintech', icon: 'https://cdn-icons-png.flaticon.com/512/284/284579.png' },
-    { title: 'ECommerce', icon: 'https://cdn-icons-png.flaticon.com/512/4290/4290854.png' },
-    { title: 'Healthcare', icon: 'https://cdn-icons-png.flaticon.com/512/1046/1046784.png' },
-    { title: 'Social', icon: 'https://cdn-icons-png.flaticon.com/512/145/145802.png' },
-    { title: 'Fitness', icon: 'https://cdn-icons-png.flaticon.com/512/2965/2965567.png' },
-    { title: 'Food Delivery', icon: 'https://cdn-icons-png.flaticon.com/512/1046/1046786.png' },
-    { title: 'Real Estate', icon: 'https://cdn-icons-png.flaticon.com/512/2356/2356781.png' },
-    { title: 'Sports', icon: 'https://cdn-icons-png.flaticon.com/512/727/727399.png' },
-    { title: 'Business', icon: 'https://cdn-icons-png.flaticon.com/512/595/595067.png' },
-    { title: 'Education', icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135768.png' },
-    { title: 'Entertainment', icon: 'https://cdn-icons-png.flaticon.com/512/833/833472.png' },
-    { title: 'Travel', icon: 'https://cdn-icons-png.flaticon.com/512/201/201623.png' },
-    { title: 'Dating', icon: 'https://cdn-icons-png.flaticon.com/512/1077/1077035.png' },
-    { title: 'Transport', icon: 'https://cdn-icons-png.flaticon.com/512/883/883703.png' },
-    { title: 'Grocery', icon: 'https://cdn-icons-png.flaticon.com/512/2331/2331970.png' },
-  ];
+ const provides = [
+  { title: 'Career', icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png' }, // job seeker / career
+  { title: 'Fintech', icon: 'https://cdn-icons-png.flaticon.com/512/284/284579.png' }, // mobile banking
+  { title: 'ECommerce', icon: 'https://cdn-icons-png.flaticon.com/512/4290/4290854.png' }, // shopping bag
+  { title: 'Healthcare', icon: 'https://cdn-icons-png.flaticon.com/512/2966/2966488.png' }, // medical cross
+  { title: 'Social', icon: 'https://cdn-icons-png.flaticon.com/512/2111/2111463.png' }, // people/community
+  { title: 'Fitness', icon: 'https://cdn-icons-png.flaticon.com/512/755/755298.png' }, // dumbbell
+  { title: 'Food Delivery', icon: 'https://cdn-icons-png.flaticon.com/512/3075/3075977.png' }, // scooter delivery
+  { title: 'Real Estate', icon: 'https://cdn-icons-png.flaticon.com/512/2356/2356781.png' }, // house/building
+  { title: 'Sports', icon: 'https://cdn-icons-png.flaticon.com/512/1165/1165205.png' }, // football
+  { title: 'Business', icon: 'https://cdn-icons-png.flaticon.com/512/1999/1999625.png' }, // business briefcase
+  { title: 'Education', icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135810.png' }, // graduation cap
+  { title: 'Entertainment', icon: 'https://cdn-icons-png.flaticon.com/512/2923/2923025.png' }, // clapperboard
+  { title: 'Travel', icon: 'https://cdn-icons-png.flaticon.com/512/69/69906.png' }, // airplane
+  { title: 'Dating', icon: 'https://cdn-icons-png.flaticon.com/512/833/833472.png' }, // heart
+  { title: 'Transport', icon: 'https://cdn-icons-png.flaticon.com/512/3097/3097144.png' }, // bus
+  { title: 'Grocery', icon: 'https://cdn-icons-png.flaticon.com/512/2331/2331970.png' }, // shopping basket
+];
 
   const unique = [
     { title: 'Ideators', icon: 'https://cdn-icons-png.flaticon.com/512/3048/3048394.png' },
