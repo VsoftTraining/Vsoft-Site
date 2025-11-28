@@ -13,6 +13,7 @@ import {
   Avatar,
   styled
 } from '@mui/material';
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -63,7 +64,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
 
 const AboutSection = styled(Box)(({ theme }) => ({
   padding: theme.spacing(8, 0),
-  backgroundColor: '#f9f9f9',
+  backgroundColor: '#fefce8',
   overflow: 'hidden',
   [theme.breakpoints.down('md')]: {
     padding: theme.spacing(6, 0),
@@ -71,9 +72,9 @@ const AboutSection = styled(Box)(({ theme }) => ({
 }));
 
 const PurpleText = styled('span')({
-  color: '#ffbd28',
-  fontWeight: 800,
-  fontSize: '2.3rem',
+  color: '#ffbe01',
+  fontWeight: 900,
+  fontSize: '2.5rem',
 });
 
 const ServiceCard = styled(Card)(({ theme }) => ({
@@ -97,25 +98,26 @@ const IconContainer = styled(Box)({
 });
 
 const ReadMoreButton = styled(Button)(({ theme }) => ({
-  color: '#7a337a',
+  color: '#000',
   fontWeight: 600,
   textTransform: 'none',
   padding: theme.spacing(0.5, 0),
   '&:hover': {
     backgroundColor: 'transparent',
-    color: '#5b1264',
+    color: '#ffbe01',
   },
 }));
 
 const StyledButton = styled(Button)(({ theme }) => ({
-  backgroundColor: '#ffbd28',
+  backgroundColor: '#ffbe01',
   color: '#000',
   padding: theme.spacing(1, 3),
   borderRadius: '5px',
   textTransform: 'uppercase',
   fontWeight: 600,
   '&:hover': {
-    backgroundColor: '#333333',
+    backgroundColor: '#000',
+    color: '#fff',
   },
 }));
 
@@ -225,36 +227,37 @@ const HomePage = () => {
     {
       title: 'WEB DEVELOPMENT',
       icon: ServiceFour,
-      description: 'Web development involves designing and building websites, ensuring functionality, responsiveness, and user-friendly experiences.',
-      link: '/services/website-development'
+      // description: 'Web development involves designing and building websites, ensuring functionality, responsiveness, and user-friendly experiences.',
+      link: '/website-development'
     },
     {
       title: 'MOBILE APP DEVELOPMENT',
       icon: ServiceTwo,
-      description: 'Mobile app development is the process of creating mobile applications for iOS and Android platforms, ensuring excellent performance and user-friendly interfaces.',
-      link: '/services/app-development'
+      // description: 'Mobile app development is the process of creating mobile applications for iOS and Android platforms, ensuring excellent performance and user-friendly interfaces.',
+      link: '/app-development'
     },
     {
       title: 'UI/UX DESIGN',
       icon: ServiceThree,
-      description: 'UX/UI web design focuses on creating intuitive, attractive, and highly user-friendly websites that enhance your experience and engagement.',
-      link: '/services/ui-ux-design'
+      // description: 'UX/UI web design focuses on creating intuitive, attractive, and highly user-friendly websites that enhance your experience and engagement.',
+      link: '/ui-ux-design'
     },
     {
       title: 'DIGITAL MARKETING',
       icon: ServiceOne,
-      description: 'Digital marketing combines social media marketing, SEO, paid ads to drive engagement and business growth.',
-      link: '/services/digital-marketing'
+      // description: 'Digital marketing combines social media marketing, SEO, paid ads to drive engagement and business growth.',
+      link: '/digital-marketing'
     }
   ];
+    
 
   const sectors = [
     { title: 'Startups', icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135823.png' },
     { title: 'Enterprises', icon: 'https://cdn-icons-png.flaticon.com/512/3063/3063825.png' },
     { title: 'Organization', icon: 'https://cdn-icons-png.flaticon.com/512/2420/2420504.png' },
     { title: 'Individuals', icon: 'https://cdn-icons-png.flaticon.com/512/921/921347.png' },
-    { title: 'Institutions', icon: 'https://cdn-icons-png.flaticon.com/512/2784/2784445.png' },
-    { title: 'Retailers', icon: 'https://cdn-icons-png.flaticon.com/512/3075/3075977.png' },
+    // { title: 'Institutions', icon: 'https://cdn-icons-png.flaticon.com/512/2784/2784445.png' },
+    // { title: 'Retailers', icon: 'https://cdn-icons-png.flaticon.com/512/3075/3075977.png' },
   ];
 
  const provides = [
@@ -263,15 +266,15 @@ const HomePage = () => {
   { title: 'ECommerce', icon: 'https://cdn-icons-png.flaticon.com/512/4290/4290854.png' }, // shopping bag
   { title: 'Healthcare', icon: 'https://cdn-icons-png.flaticon.com/512/2966/2966488.png' }, // medical cross
   { title: 'Social', icon: 'https://cdn-icons-png.flaticon.com/512/2111/2111463.png' }, // people/community
-  { title: 'Fitness', icon: 'https://cdn-icons-png.flaticon.com/512/755/755298.png' }, // dumbbell
+  // { title: 'Fitness', icon: 'https://cdn-icons-png.flaticon.com/512/755/755298.png' }, // dumbbell
   { title: 'Food Delivery', icon: 'https://cdn-icons-png.flaticon.com/512/3075/3075977.png' }, // scooter delivery
   { title: 'Real Estate', icon: 'https://cdn-icons-png.flaticon.com/512/2356/2356781.png' }, // house/building
-  { title: 'Sports', icon: 'https://cdn-icons-png.flaticon.com/512/1165/1165205.png' }, // football
+  // { title: 'Sports', icon: 'https://cdn-icons-png.flaticon.com/512/1165/1165205.png' }, // football
   { title: 'Business', icon: 'https://cdn-icons-png.flaticon.com/512/1999/1999625.png' }, // business briefcase
   { title: 'Education', icon: 'https://cdn-icons-png.flaticon.com/512/3135/3135810.png' }, // graduation cap
-  { title: 'Entertainment', icon: 'https://cdn-icons-png.flaticon.com/512/2923/2923025.png' }, // clapperboard
+  // { title: 'Entertainment', icon: 'https://cdn-icons-png.flaticon.com/512/2923/2923025.png' }, // clapperboard
   { title: 'Travel', icon: 'https://cdn-icons-png.flaticon.com/512/69/69906.png' }, // airplane
-  { title: 'Dating', icon: 'https://cdn-icons-png.flaticon.com/512/833/833472.png' }, // heart
+  // { title: 'Dating', icon: 'https://cdn-icons-png.flaticon.com/512/833/833472.png' }, // heart          
   { title: 'Transport', icon: 'https://cdn-icons-png.flaticon.com/512/3097/3097144.png' }, // bus
   { title: 'Grocery', icon: 'https://cdn-icons-png.flaticon.com/512/2331/2331970.png' }, // shopping basket
 ];
@@ -318,7 +321,7 @@ const HomePage = () => {
                 fontWeight="bold"
                 ref={animationRefs.heroHeading}
               >
-                Empowering Businesses with <PurpleText>solutions!</PurpleText>
+                Empowering Businesses with <PurpleText>Solutions!</PurpleText>
               </Typography>
               <Typography variant="body1" paragraph>
                 Transform your vision into reality with VSoft Solutions!
@@ -367,7 +370,7 @@ const HomePage = () => {
                 ref={animationRefs.aboutTitle}
                 sx={{ display: 'flex', alignItems: 'center', mb: 4 }}
               >
-                About Us <ArrowForwardIcon sx={{ ml: 1, color: '#ffbd28' }} />
+                About Us <ArrowForwardIcon sx={{ ml: 1, color: '#ffbe01' }} />
               </Typography>
               <Box
                 component="img"
@@ -416,11 +419,11 @@ const HomePage = () => {
       {/* Services Section */}
       <Box sx={{
         py: 4,
-        backgroundImage: `url(${ServiceBck})`,
+        // backgroundImage: `url(${ServiceBck})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        color: 'white',
+        color: 'black',
         overflow: 'hidden'
       }}>
         <Container maxWidth="lg">
@@ -481,7 +484,7 @@ const HomePage = () => {
       </Box>
 
       {/* What We Do Section */}
-      <Box sx={{ py: 8, backgroundColor: '#fff', overflow: 'hidden' }}>
+      <Box sx={{ py: 8, backgroundColor: '#fefce8', overflow: 'hidden' }}>
         <Container maxWidth="lg">
           <Box textAlign="center" mb={4}>
             <Typography variant="h3" fontWeight="bold" ref={animationRefs.whatWeDoHeading} gutterBottom>
@@ -518,67 +521,6 @@ const HomePage = () => {
         </Container>
       </Box>
 
-      {/* Industries We Serve Section */}
-      <Box sx={{ py: 8, backgroundColor: '#f9f9f9', overflow: 'hidden' }}>
-        <Container maxWidth="xl">
-          <Box textAlign="center" mb={4}>
-            <Typography variant="h3" fontWeight="bold" ref={animationRefs.industriesHeading} gutterBottom>
-              Industries We Serve
-            </Typography>
-            <Typography variant="body1">
-              <b>VSOFT SOLUTIONS</b>, we specialize in delivering industry-specific solutions that are meticulously crafted to address the unique challenges, demands, and opportunities of businesses across various sectors. With a strong emphasis on innovation, advanced technology, and strategic consulting, we empower organizations to streamline operations, enhance productivity, drive sustainable revenue growth, and maintain a competitive edge in their respective industries.
-              In today's rapidly evolving business landscape, staying ahead of the curve requires adaptability, efficiency, and forward-thinking strategies. We help enterprises navigate complex industry transformations by leveraging cutting-edge digital solutions, data-driven decision-making, and automation technologies.
-            </Typography>
-          </Box>
-
-          <Grid container spacing={4} justifyContent="center">
-            {provides.map((provide, index) => (
-              <Grid item key={index} sx={{
-                flexBasis: { xs: '100%', sm: '100%', md: '20%' },
-                maxWidth: { xs: '100%', sm: '100%', md: '20%' },
-                display: 'flex',
-              }}>
-                <Card elevation={4} sx={{
-                  textAlign: 'center',
-                  py: 3,
-                  borderRadius: 3,
-                  width: '100%',
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  transition: 'transform 0.3s',
-                  '&:hover': {
-                    transform: 'scale(1.03)',
-                    boxShadow: 6,
-                  },
-                }}>
-                  <Avatar src={provide.icon} alt={provide.title} variant="square" sx={{ width: 64, height: 64, mb: 2 }} />
-                  <CardContent sx={{ p: 0 }}>
-                    <Typography variant="subtitle1" fontWeight="bold">
-                      {provide.title}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-
-          <Box textAlign="center" mt={5}>
-            <Typography variant='body1' gutterBottom>
-              In today's rapidly evolving business landscape, staying ahead of the curve requires adaptability, efficiency, and forward-thinking strategies...
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-              Each industry presents its own set of challenges—whether it's compliance and security in finance, supply chain optimization in manufacturing, patient-centered care in healthcare, or seamless customer engagement in retail. Our expertise ensures that we deliver customized, high-impact solutions tailored to meet these specific needs.
-            </Typography>
-            <Typography variant='body1' gutterBottom>
-              With a proven track record of success in healthcare, finance, manufacturing, retail, education, government, energy, and beyond, we provide
-            </Typography>
-          </Box>
-        </Container>
-      </Box>
-
       {/* Excellence Section */}
       <Box sx={{
         backgroundImage: `url(${WeOffer})`,
@@ -597,7 +539,7 @@ const HomePage = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.73)',
+          backgroundColor: '#ffbe01',
           zIndex: 1,
         }} />
 
@@ -610,7 +552,7 @@ const HomePage = () => {
           textAlign: 'center',
           px: 2,
         }}>
-          <Typography variant="h3" fontWeight="bold" ref={animationRefs.excellenceHeading} gutterBottom>
+          <Typography variant="h3" color='black' fontWeight="bold" ref={animationRefs.excellenceHeading} gutterBottom>
             We Offer Excellence To Our Clients
           </Typography>
 
@@ -621,12 +563,12 @@ const HomePage = () => {
                   <Paper elevation={6} sx={{
                     p: 3,
                     textAlign: 'center',
-                    border: '2px solid #ffbd28',
+                    border: '2px solid #00000',
                     borderRadius: 2,
                     backgroundColor: '#fff',
                     color: '#000'
                   }}>
-                    <Box sx={{ mb: 2, color: '#ffbd28' }}>{feature.icon}</Box>
+                    <Box sx={{ mb: 2, color: '#ffbe01' }}>{feature.icon}</Box>
                     <Typography variant="subtitle1" fontWeight="bold">{feature.title}</Typography>
                   </Paper>
                 </Grid>
@@ -636,13 +578,13 @@ const HomePage = () => {
 
           <Grid container spacing={4} justifyContent="center">
             <Grid item xs={12} md={10} lg={8}>
-              <Typography variant="body1" sx={{ mb: 2 }}>
+              <Typography variant="body1" color= 'black' sx={{ mb: 2 }}>
                 <strong>VSOFT SOLUTIONS</strong>, excellence is at the core of everything we do. We are committed to delivering high-quality solutions, innovative strategies, and exceptional service to help our clients achieve their business goals.
               </Typography>
-              <Typography variant="body1" sx={{ mb: 2 }}>
+              <Typography variant="body1" color= 'black' sx={{ mb: 2 }}>
                 With a focus on cutting-edge technology, efficiency, and customer-centric solutions, we empower businesses across various industries to stay ahead in an evolving market. Our expertise ensures that every solution we provide is tailored, results-driven, and designed for long-term success.
               </Typography>
-              <Typography variant="body1">
+              <Typography variant="body1" color= 'black'>
                 Partner with us to experience unparalleled service, industry-leading innovation, and a commitment to excellence in every aspect of your business growth.
               </Typography>
             </Grid>
@@ -662,7 +604,7 @@ const HomePage = () => {
             }}>
               {steps.map((step, i) => (
                 <Box key={i} sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                  <Box sx={{ color: '#ffbd28' }}>{step.icon}</Box>
+                  <Box sx={{ color: '#ffbe01' }}>{step.icon}</Box>
                   <Typography variant="subtitle1" fontWeight="bold">{step.label}</Typography>
                 </Box>
               ))}
@@ -672,7 +614,7 @@ const HomePage = () => {
       </Box>
 
       {/* Unique Section */}
-      <Box sx={{ py: 8, backgroundColor: '#fff', overflow: 'hidden' }}>
+      {/* <Box sx={{ py: 8, backgroundColor: '#f9f9f9', overflow: 'hidden' }}>
         <Container maxWidth="lg">
           <Box textAlign="center" mb={4}>
             <Typography variant="h4" fontWeight="bold" ref={animationRefs.uniqueHeading} gutterBottom>
@@ -710,7 +652,7 @@ const HomePage = () => {
             ))}
           </Grid>
         </Container>
-      </Box>
+      </Box> */}
       
       <ClientLogoSlider />
     </>

@@ -7,6 +7,7 @@ import Header from './component/Header';
 import Footer from './component/Footer';
 import Home from './component/Home';
 import WebDevlop from './component/WebDevlop';
+import ServicesPage from './component/ServicesPage';
 import OurCulture from './component/OurCulture';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import { Routes, Route } from 'react-router-dom'; // Remove BrowserRouter here
@@ -25,8 +26,10 @@ import Internship from './component/Internship';
 import StepUpSAP from './component/StepUpSAP';
 import StepUpCloud from './component/StepUpCloud'; 
 // import PromotionalPopup from './Animations/PromotionalPopup';
-// import Product from './component/Product';
+import Product from './component/Product';
+import Pricing from './component/Pricing';
 import PageTitleUpdater from './component/PageTitleUpdater';
+import HomeTvl from './component/HomeTvl';
 
 const theme = createTheme({
   palette: {
@@ -90,20 +93,23 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/servicespage" element={<ServicesPage />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/services/website-development" element={<WebDevlop />} />
-          <Route path="/services/app-development" element={<ApplicationDevelopment />} />
-          <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
-          <Route path="/services/wordpress-development" element={<WordPress />} />
-          <Route path='/services/ui-ux-design' element={<UiUx />} ></Route>
+          <Route path="/website-development" element={<WebDevlop />} />
+          <Route path="/app-development" element={<ApplicationDevelopment />} />
+          <Route path="digital-marketing" element={<DigitalMarketing />} />
+          <Route path="wordpress-development" element={<WordPress />} />
+          <Route path='/ui-ux-design' element={<UiUx />} ></Route>
           <Route path='/career' element={<CareersPage />} ></Route>
           <Route path="/culture" element={<OurCulture />} > </Route>
           <Route path="/jobportal" element={< JobSlide/>}> </Route>
           <Route path="/internship" element={< Internship/>}></Route>
-          <Route path="/stepup" element={< StepUp/>}></Route>
+          <Route path="/vstepup" element={< StepUp/>}></Route>
           <Route path="/stepupsap" element={< StepUpSAP/>}></Route>
           <Route path="/stepupcloud" element={< StepUpCloud/>}></Route>
-          {/* <Route path="/product" element={<Product />} /> */}
+          <Route path='/pricing' element={<Pricing/>}></Route>
+          <Route path="/software-company-in-tirunelveli" element={<HomeTvl />} />
+          <Route path="/product" element={<Product />} />
         </Routes>
         <FloatingIcons />
         {/* <PromotionalPopup /> */}

@@ -21,7 +21,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import WebIcon from '@mui/icons-material/Language';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import ProductBanner from '../assets/product-bg.webp';
-import Vconstech from '../assets/Vlogo1.png';
+import Vconstech from '../assets/Vconstech_Logo.png';
 import DescriptionIcon from '@mui/icons-material/Description';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import TaskIcon from '@mui/icons-material/Task';
@@ -155,14 +155,13 @@ const Product = () => {
       {/* Product Introduction */}
       <Box
         sx={{
-          bgcolor: '#334155', // bg-slate-700 equivalent
           py: { xs: 4, sm: 6, md: 8 },
           textAlign: 'center',
         }}
       >
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
           <Breadcrumbs
-            separator={<NavigateNextIcon fontSize="small" sx={{ color: '#fff' }} />}
+            separator={<NavigateNextIcon fontSize="small" sx={{ color: '#000' }} />}
             aria-label="breadcrumb"
             sx={{ 
               justifyContent: { xs: 'center', sm: 'left' }, 
@@ -178,7 +177,7 @@ const Product = () => {
                 display: 'flex', 
                 alignItems: 'center', 
                 cursor: 'pointer', 
-                color: '#fff',
+                color: '#000',
                 fontSize: { xs: '0.75rem', sm: '0.875rem' }
               }}
             >
@@ -186,7 +185,7 @@ const Product = () => {
               Home
             </Link>
             <Typography
-              color="#fff"
+              color="#000"
               sx={{ 
                 display: 'flex', 
                 alignItems: 'center',
@@ -211,21 +210,20 @@ const Product = () => {
             />
           </Box>
           <Typography 
-            variant={isMobile ? "h6" : isTablet ? "h5" : "h4"} 
-            color="rgba(255,255,255,0.8)" 
+            variant={isMobile ? "h6" : isTablet ? "h4" : "h4"} 
+            // color="#ffbe01" 
             sx={{ 
-              fontFamily: "cinzel",
               mb: { xs: 2, sm: 3, md: 4 }, 
               maxWidth: { xs: '100%', sm: '600px', md: '800px' }, 
               mx: 'auto',
               px: { xs: 2, sm: 0 }
             }}
           >
-            SMART SITE MANAGEMENT FOR THE CONSTRUCTION INDUSTRY
+            SMART SITE MANAGEMENT FOR THE <span style={{fontFamily:'cenzil', fontSize: '2.5rem', color: '#ffbe01'}}>CONSTRUCTION INDUSTRY</span>
           </Typography>
           <Typography 
             variant="body1" 
-            color="rgba(255,255,255,0.7)" 
+            // color="rgba(255,255,255,0.7)" 
             sx={{ 
               maxWidth: { xs: '100%', sm: '700px', md: '900px' }, 
               mx: 'auto', 

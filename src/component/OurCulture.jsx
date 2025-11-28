@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './OurCulture.css';
 import {
   Box,
@@ -23,6 +24,8 @@ import CultureTwo from '../assets/culture2.webp';
 // import CultureThree from '../assets/culture3.webp';
 import CultureFour from '../assets/culture4.webp';
 import CultureFive from '../assets/culture5.webp';
+import CultureSix from '../assets/our-culture4.webp';
+import internshipTuti from '../assets/tuti-interns.webp';
 
 const OurCulture = () => {
   const [selectedPost, setSelectedPost] = useState(null);
@@ -32,6 +35,7 @@ const OurCulture = () => {
   const headingRef = useRef();
   const subHeadingRef = useRef();
   const descRef = useRef();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -41,7 +45,7 @@ const OurCulture = () => {
       { opacity: 0, y: 50, scale: 1.95 },
       {
         opacity: 1,
-        y: 0,
+        y: 0,    
         scale: 1,
         duration: 1.2,
         ease: 'power3.out',
@@ -116,6 +120,18 @@ const OurCulture = () => {
     },
     {
       id: 4,
+      title: "Full Stack Internship",
+      image: CultureSix,
+      author: "Vsoft",
+      authorAvatar: DP,
+      likes: 79,
+      comments: 13,
+      description: "Internship Completed! St. John’s College student shines in Fullstack Development.",
+      tags: ["#react", "#php", "#HTML&CSS", "#fullstack", "#Internship", "#Excellence"],
+      category: "certification"
+    },
+    {
+      id: 5,
       title: "SAP Training Workshop",
       image: SAP,
       author: "Vsoft",
@@ -127,7 +143,7 @@ const OurCulture = () => {
       category: "festival"
     },
     {
-      id: 5,
+      id: 6,
       title: "Intership Alerts",
       image: CultureOne,
       author: "Vsoft",
@@ -140,7 +156,7 @@ const OurCulture = () => {
     },
 
     {
-      id: 6,
+      id: 7,
       title: "Digital Marketing Internship",
       image: CultureTwo,
       author: "Vsoft",
@@ -152,7 +168,7 @@ const OurCulture = () => {
       category: "festival"
     },
     {
-      id: 7,
+      id: 8,
       title: "Full Stack Internship",
       image: CultureFour,
       author: "Vsoft",
@@ -164,7 +180,7 @@ const OurCulture = () => {
       category: "festival"
     },
     {
-      id: 8,
+      id: 9,
       title: "Wordpress Development Internship",
       image: CultureFive,
       author: "Vsoft",
@@ -174,6 +190,18 @@ const OurCulture = () => {
       description: "Intership Achivements Unlocked! Excited to share that I've successfully completed a 15 days Wordpress Development internship at Vsoft Solutions !",
       tags: ["#wordpress", "#Workshop", "#cms", "#Technology"],
       category: "festival"
+    },
+    {
+      id: 10,
+      title: "UI/UX Internship",
+      image: internshipTuti,
+      author: "Vsoft",
+      authorAvatar: DP,
+      likes: 74,
+      comments: 13,
+      description: "1-Month UI/UX Internship completed at VSoft Solutions – Tuticorin student!",
+      tags: ["#ui/ux", "#figma", "#internship", "#Technology"],
+      category: "certification"
     },
   ];
 
