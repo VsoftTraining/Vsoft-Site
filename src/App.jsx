@@ -1,35 +1,36 @@
 import './App.css';
-import '@fontsource/poppins/600.css'; // For headings
+import '@fontsource/poppins/600.css';
 import '@fontsource/poppins/700.css'; 
-import '@fontsource/inter/400.css';   // For body
+import '@fontsource/inter/400.css';  
 import '@fontsource/inter/500.css'; 
 import Header from './component/Header';
 import Footer from './component/Footer';
-import Home from './component/Home';
-import WebDevlop from './component/WebDevlop';
-import ServicesPage from './component/ServicesPage';
-import OurCulture from './component/OurCulture';
+import Home from './pages/Home'
+import WebDevlop from './pages/WebDevlop';
+import ServicesPage from './pages/ServicesPage';
+import OurCulture from './pages/OurCulture';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import { Routes, Route } from 'react-router-dom'; // Remove BrowserRouter here
-import AboutUs from './component/AboutUs';
-import Contact from './component/Contact';
-import DigitalMarketing from './component/DigitalMarketing';
-import WordPress from './component/WordPress';
-import UiUx from './component/UiUx';
-import StepUp from './component/StepUp';
-import CareersPage from './component/CareersPage';
-import JobSlide from './component/JobSlide';
-import ScrollToTop from './component/ScrollToTop';
-import ApplicationDevelopment from './component/ApplicationDevelopment';
+import AboutUs from './pages/AboutUs';
+import Contact from './pages/Contact';
+import DigitalMarketing from './pages/DigitalMarketing';
+import WordPress from './pages/WordPress';
+import UiUx from './pages/UiUx';
+import StepUp from './pages/StepUp';
+import CareersPage from './pages/CareersPage';
+import JobSlide from './pages/JobSlide';
+import ScrollToTop from './pages/ScrollToTop';
+import ApplicationDevelopment from './pages/ApplicationDevelopment';
 import FloatingIcons from './Animations/FloatingIcons';
-import Internship from './component/Internship';
-import StepUpSAP from './component/StepUpSAP';
-import StepUpCloud from './component/StepUpCloud'; 
+import Internship from './pages/Internship';
+import StepUpSAP from './pages/StepUpSAP';
+import StepUpCloud from './pages/StepUpCloud'; 
 // import PromotionalPopup from './Animations/PromotionalPopup';
-import Product from './component/Product';
-import Pricing from './component/Pricing';
-import PageTitleUpdater from './component/PageTitleUpdater';
-import HomeTvl from './component/HomeTvl';
+import Product from './pages/Product';
+import Pricing from './pages/Pricing';
+import PageTitleUpdater from './pages/PageTitleUpdater';
+import HomeTvl from './pages/HomeTvl';
+import TermsAndConditions from './pages/TermsAndConditions';
 
 const theme = createTheme({
   palette: {
@@ -110,6 +111,7 @@ function App() {
           <Route path='/pricing' element={<Pricing/>}></Route>
           <Route path="/software-company-in-tirunelveli" element={<HomeTvl />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         </Routes>
         <FloatingIcons />
         {/* <PromotionalPopup /> */}
