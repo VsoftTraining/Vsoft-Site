@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import SEO from '../components/SEO';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
@@ -64,26 +65,33 @@ const CareersPage = () => {
 
   useEffect(() => {
     // Set initial states
-    gsap.set(breadcrumbRef.current, { opacity: 1, y: 0 });
-    gsap.set(headingRef.current, { opacity: 1, y: 50, scale: 0.9 });
+    gsap.set(breadcrumbRef.current, { opacity: 0, y: -30 });
+    gsap.set(headingRef.current, { opacity: 0, y: 50, scale: 0.9 });
 
     // Set up timeline for initial animations
-    const tl = gsap.timeline({ delay: 0.5 });
+    const tl = gsap.timeline({ delay: 0.3 });
 
     // Hero section animations
-    tl.from(breadcrumbRef.current, {
-      opacity: 4,
-      y: -30,
+    tl.fromTo(breadcrumbRef.current, {
+      opacity: 0,
+      y: -30
+    }, {
+      opacity: 1,
+      y: 0,
       duration: 0.8,
-      ease: 'power3.out'
+      ease: 'power2.out'
     })
-      .from(headingRef.current, {
+      .fromTo(headingRef.current, {
+        opacity: 0,
+        y: 50,
+        scale: 0.9
+      }, {
         opacity: 1,
         y: 0,
         scale: 1,
-        duration: 1.8,
+        duration: 1.5,
         ease: 'power3.out'
-      }, '-=0.6');
+      }, '-=0.4');
 
     // Overview section animations with ScrollTrigger
     gsap.fromTo(overviewRef.current?.children, {
@@ -246,172 +254,165 @@ const CareersPage = () => {
 
   return (
     <>
+      <SEO
+        title="Careers at VSoft Solutions | Join Our Team"
+        description="Join VSoft Solutions - a leading software development company in Tirunelveli. Explore career opportunities, internships, and be part of an innovative team shaping the future of technology."
+        keywords="careers vsoft solutions, software jobs tirunelveli, internship opportunities, technology careers"
+        canonical="/career"
+      />
       {/* Hero Section */}
       <Box
         ref={heroRef}
         sx={{
-          py: 10,
-          color: '#fff',
-          textAlign: 'center',
-          backgroundImage: `url(${CareerBanner})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
+          py: { xs: 8, md: 12 },
+          backgroundColor: '#ffffff',
           position: 'relative',
-          overflow: 'hidden'
+          overflow: 'hidden',
         }}
       >
-        <Box
-          sx={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(36, 22, 36, 0.5)',
-            zIndex: 1,
-          }}
-        />
-        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
+        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, overflow: 'hidden' }}>
+          {/* Breadcrumbs */}
           <Box ref={breadcrumbRef} sx={{ opacity: 1 }}>
             <Breadcrumbs
-              separator={<NavigateNextIcon fontSize="small" sx={{ color: '#fff' }} />}
+              separator={<NavigateNextIcon fontSize="small" sx={{ color: '#666' }} />}
               aria-label="breadcrumb"
-              sx={{ justifyContent: 'center', display: 'flex', mb: 3 }}
+              sx={{ justifyContent: 'center', display: 'flex', mb: 4 }}
             >
               <Link
                 underline="hover"
                 onClick={() => navigate('/')}
-                sx={{ 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  cursor: 'pointer', 
-                  color: '#fff',
-                  fontSize: '0.95rem',
-                  transition: 'all 0.3s ease',
-                  '&:hover': {
-                    color: '#e0e0e0',
-                    transform: 'translateY(-2px)'
-                  }
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  cursor: 'pointer',
+                  color: '#333',
+                  textDecoration: 'none',
+                  fontSize: { xs: '14px', md: '16px' },
+                  '&:hover': { color: '#ffbe01' }
                 }}
               >
-                <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+                <HomeIcon sx={{ mr: 0.5 }} fontSize="small" />
                 Home
               </Link>
-              <Typography
-                color="#fff"
-                sx={{ 
-                  display: 'flex', 
-                  alignItems: 'center',
-                  fontSize: '0.95rem'
-                }}
-              >
-                <WebIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-                Career Page
-              </Typography>
+              <Box sx={{
+                display: 'flex',
+                alignItems: 'center',
+                color: '#666',
+                fontSize: { xs: '14px', md: '16px' }
+              }}>
+                <WebIcon sx={{ mr: 0.5 }} fontSize="small" />
+                Careers
+              </Box>
             </Breadcrumbs>
           </Box>
 
-          <Typography 
-            variant="h4" 
-            fontWeight="bold" 
-            ref={headingRef}
-            sx={{
-              textShadow: '0 2px 4px rgba(0,0,0,0.3)'
-            }}
-          >
-            Join Us in Making a Difference.
-          </Typography>
+          {/* Hero Content */}
+          <Box sx={{ textAlign: 'center', px: { xs: 2, md: 0 } }}>
+            <Typography
+              variant={isMobile ? 'h4' : 'h2'}
+              fontWeight="700"
+              ref={headingRef}
+              sx={{
+                mb: 2,
+                color: '#000',
+                lineHeight: 1.2
+              }}
+            >
+              Join Us in Making a Difference
+            </Typography>
+
+            <Typography
+              variant="h6"
+              sx={{
+                mb: 3,
+                color: '#ffbe01',
+                fontSize: { xs: '2rem', md: '2.5rem' },
+                lineHeight: 1.2,
+                fontWeight: 700
+              }}
+            >
+              Shape the Future of Technology
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{
+                mb: 4,
+                maxWidth: '700px',
+                mx: 'auto',
+                color: '#666',
+                fontSize: { xs: '0.95rem', md: '1.1rem' },
+                lineHeight: 1.7
+              }}
+            >
+              At VSoft Solutions, we're more than just a tech company - we're a team of innovators, creators, and problem-solvers who believe in using technology to make an impact. Join our mission to transform businesses and create meaningful digital experiences.
+            </Typography>
+
+            {/* Buttons */}
+            <Box
+              ref={buttonsRef}
+              sx={{ display: 'flex', gap: 3, flexWrap: 'wrap', justifyContent: 'center' }}
+            >
+                <Button
+                className="animated-button"
+                variant="contained"
+                size="large"
+                sx={{
+                  borderRadius: '24px',
+                  px: 4,
+                  py: 1.5,
+                  fontWeight: 'bold',
+                  color: '#111',
+                  backgroundColor: '#ffbd28',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 4px 15px rgba(128, 48, 130, 0.3)',
+                  '&:hover': {
+                    backgroundColor: '#ffbf28c5',
+                    boxShadow: '0 6px 20px rgba(128, 48, 130, 0.4)',
+                    transform: 'translateY(-2px)',
+                  },
+                }}
+                onClick={() => navigate('/internship')}
+              >
+                Internships
+              </Button>
+
+                <Button
+                className="animated-button"
+                variant="outlined"
+                size="large"
+                sx={{
+                  borderRadius: '24px',
+                  px: 4,
+                  py: 1.5,
+                  fontWeight: 'bold',
+                  color: '#ffbe01',
+                  transition: 'all 0.3s ease',
+                  backgroundColor: "black",
+                  '&:hover': {
+                    backgroundColor: 'rgba(128, 48, 130, 0.1)',
+                    borderColor: '#ffbe01',
+                    color: "#000",
+                    transform: 'translateY(-2px)',
+                    boxShadow: '0 4px 15px rgba(128, 48, 130, 0.2)',
+                  },
+                }}
+                onClick={() => navigate('/jobportal')}
+              >
+                View Openings
+              </Button>
+            </Box>
+          </Box>
         </Container>
       </Box>
-
-      {/* Career Overview & CTA */}
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Box
-          ref={overviewRef}
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: 4,
-            textAlign: 'center',
-          }}
-        >
-          <Box sx={{ maxWidth: 800 }}>
-            <Typography variant="h4" fontWeight="bold" gutterBottom>
-              Join the Vision. Grow with VSoft.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              At VSoft Solutions, we're more than just a tech company - we're a team of innovators, creators, and problem-solvers who believe in using technology to make an impact.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Whether you're just starting your career or expanding your expertise, VSoft offers a dynamic environment for learning, collaboration, and growth.
-            </Typography>
-          </Box>
-
-          {/* Buttons */}
-          <Box 
-            ref={buttonsRef}
-            sx={{ display: 'flex', gap: 3, flexWrap: 'wrap', justifyContent: 'center' }}
-          >
-            <Button
-              className="animated-button"
-              variant="contained"
-              size="large"
-              sx={{
-                borderRadius: '24px',
-                px: 4,
-                py: 1.5,
-                fontWeight: 'bold',
-                color: '#111',
-                backgroundColor: '#ffbd28',
-                transition: 'all 0.3s ease',
-                boxShadow: '0 4px 15px rgba(128, 48, 130, 0.3)',
-                '&:hover': {
-                  backgroundColor: '#ffbf28c5',
-                  boxShadow: '0 6px 20px rgba(128, 48, 130, 0.4)',
-                  transform: 'translateY(-2px)',
-                },
-              }}
-              href="/jobportal"
-            >
-              Job Openings
-            </Button>
-
-            <Button
-              className="animated-button"
-              variant="outlined"
-              size="large"
-              sx={{
-                borderRadius: '24px',
-                px: 4,
-                py: 1.5,
-                fontWeight: 'bold',
-                color: '#111',
-                borderColor: '#ffbd28',
-                transition: 'all 0.3s ease',
-                '&:hover': {
-                  backgroundColor: 'rgba(128, 48, 130, 0.1)',
-                  borderColor: '#e4aa23ff',
-                  transform: 'translateY(-2px)',
-                  boxShadow: '0 4px 15px rgba(128, 48, 130, 0.2)',
-                },
-              }}
-              href="/internship"
-            >
-              Internships / Courses
-            </Button>
-          </Box>
-        </Box>
-      </Container>
 
       <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          backgroundColor: '#7d8230ff',
-          color: '#fff',
+          backgroundColor: '#fefce8',
+          color: '#000',
           height: 'auto',
           py: { xs: 4, md: 6 },
           position: 'relative',
@@ -446,12 +447,12 @@ const CareersPage = () => {
               onChange={handleTabChange}
               sx={{
                 '& .MuiTabs-indicator': {
-                  backgroundColor: '#111',
+                  backgroundColor: '#ffbe01',
                   height: 3,
                   borderRadius: '2px'
                 },
                 '& .MuiTab-root': {
-                  color: '#fff',
+                  color: '#666',
                   fontSize: { xs: '1rem', md: '1.25rem' },
                   fontWeight: 400,
                   textTransform: 'none',
@@ -459,12 +460,12 @@ const CareersPage = () => {
                   padding: { xs: '12px 16px', md: '16px 24px' },
                   transition: 'all 0.3s ease',
                   '&:hover': {
-                    color: '#ccc',
+                    color: '#ffbe01',
                     transform: 'translateY(-2px)'
                   }
                 },
                 '& .MuiTab-root.Mui-selected': {
-                  color: '#111'
+                  color: '#000'
                 }
               }}
               variant={isMobile ? "scrollable" : "standard"}
@@ -510,7 +511,7 @@ const CareersPage = () => {
                   sx={{
                     fontSize: { xs: '1rem', md: '1.125rem', lg: '1.25rem' },
                     lineHeight: { xs: 1.6, md: 1.7 },
-                    color: '#fff',
+                    color: '#000',
                     maxWidth: { xs: '100%', lg: '90%' }
                   }}
                 >

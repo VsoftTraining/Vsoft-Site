@@ -13,6 +13,7 @@ import {
   CardMedia,
   useTheme,
 } from '@mui/material';
+import SEO from '../components/SEO';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import HomeIcon from '@mui/icons-material/Home';
@@ -38,6 +39,7 @@ import Bootstrap from '../assets/Bootstrap.avif';
 import FireBase from '../assets/firebase.avif';
 import NextJs from '../assets/nextjs.avif';
 import Mui from '../assets/MUI.avif';
+import WordPress from "../assets/wordpressLogo.avif";
 import ProjectDurga from '../assets/ProjectWeb1.webp';
 import ProjectMKM from '../assets/ProjectWeb2.webp';
 import ProjectCrackers from '../assets/ProjectWeb3.webp';
@@ -222,6 +224,26 @@ const WebDevlop = () => {
       icon: Support,
       title: 'Support and Maintenance',
       description: 'Support and maintenance services involve providing ongoing technical assistance and maintenance to ensure the smooth operation of software systems.'
+    },
+    {
+      title: 'WordPress Development',
+      description: 'Professional WordPress development services including custom themes, plugins, e-commerce solutions, and responsive design.',
+      icon: WordPress
+    },
+    {
+      title: 'WordPress Installation & Setup',
+      description: 'Complete WordPress installation and configuration with optimal performance settings for your business.',
+      icon: WordPress
+    },
+    {
+      title: 'WordPress Migration',
+      description: 'Seamless migration of your WordPress site to a new host without downtime or data loss.',
+      icon: WordPress
+    },
+    {
+      title: 'WordPress eCommerce',
+      description: 'Launch your online store with powerful WooCommerce integration and advanced e-commerce features.',
+      icon: WordPress
     }
   ];
 
@@ -236,11 +258,18 @@ const WebDevlop = () => {
     { name: 'Mongo DB', logo: MongoDB },
     { name: 'Firebase', logo: FireBase },
     { name: 'Bootstrap', logo: Bootstrap },
-    { name: 'Material UI', logo: Mui }
+    { name: 'Material UI', logo: Mui },
+    { name: 'WordPress', logo: WordPress },
   ];
 
   return (
     <>
+      <SEO
+        title="Website Development Services | VSoft Solutions"
+        description="Professional website development services by VSoft Solutions. Custom web development, e-commerce solutions, responsive design, and website maintenance services in Tirunelveli."
+        keywords="website development, web development services, custom website, e-commerce development, responsive web design"
+        canonical="/website-development"
+      />
       {/* Add CSS to prevent horizontal overflow */}
       <style jsx global>{`
         html, body {
@@ -263,60 +292,21 @@ const WebDevlop = () => {
         }
       `}</style>
 
-      {/* Hero Section with Background and Overlay */}
+      {/* Hero Section */}
       <Box
         sx={{
-          py: { xs: 6, sm: 8, md: 12, lg: 15 },
-          px: { xs: 1.5, sm: 2, md: 3, lg: 4 },
-          color: '#fff',
-          textAlign: 'center',
-          backgroundImage: `url(${WebsiteHero})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
+          py: { xs: 8, md: 12 },
+          backgroundColor: '#ffffff',
           position: 'relative',
-          minHeight: { xs: '55vh', sm: '60vh', md: '65vh', lg: '70vh' },
-          display: 'flex',
-          alignItems: 'center',
           overflow: 'hidden',
-          maxWidth: '100%', // Ensure no overflow
-          width: '100%'
         }}
       >
-        {/* Overlay for opacity */}
-        <Box
-          sx={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(36, 22, 36, 0.5)',
-            zIndex: 1,
-          }}
-        />
-
-        {/* Content Above Overlay */}
-        <Container
-          maxWidth="lg"
-          sx={{
-            position: 'relative',
-            zIndex: 2,
-            width: '100%',
-            maxWidth: '100%',
-            overflow: 'hidden'
-          }}
-        >
+        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, overflow: 'hidden' }}>
           {/* Breadcrumbs */}
           <Breadcrumbs
-            separator={<NavigateNextIcon fontSize="small" sx={{ color: '#fff' }} />}
+            separator={<NavigateNextIcon fontSize="small" sx={{ color: '#666' }} />}
             aria-label="breadcrumb"
-            sx={{
-              justifyContent: 'center',
-              display: 'flex',
-              mb: { xs: 2, sm: 3, md: 4 },
-              flexWrap: 'wrap'
-            }}
+            sx={{ justifyContent: 'center', display: 'flex', mb: 4 }}
           >
             <Link
               underline="hover"
@@ -325,136 +315,94 @@ const WebDevlop = () => {
                 display: 'flex',
                 alignItems: 'center',
                 cursor: 'pointer',
-                color: '#fff',
-                fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' }
+                color: '#333',
+                textDecoration: 'none',
+                fontSize: { xs: '14px', md: '16px' },
+                '&:hover': { color: '#ffbe01' }
               }}
             >
-              <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+              <HomeIcon sx={{ mr: 0.5 }} fontSize="small" />
               Home
             </Link>
-            <Typography
-              color="#fff"
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' }
-              }}
-            >
-              <WebIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+            <Box sx={{
+              display: 'flex',
+              alignItems: 'center',
+              color: '#666',
+              fontSize: { xs: '14px', md: '16px' }
+            }}>
+              <WebIcon sx={{ mr: 0.5 }} fontSize="small" />
               Web Development
-            </Typography>
+            </Box>
           </Breadcrumbs>
 
-          {/* Main Text - Improved Responsive Typography with overflow fix */}
-          <Box
-            sx={{
-              maxWidth: '100%',
-              overflow: 'hidden',
-              px: { xs: 0.5, sm: 1, md: 2 },
-              width: '100%'
-            }}
-          >
+          {/* Hero Content */}
+          <Box sx={{ textAlign: 'center', px: { xs: 2, md: 0 } }}>
             <Typography
               variant="h4"
               component="h1"
               fontWeight="bold"
               ref={heroHeadingRef}
               sx={{
-                fontSize: {
-                  xs: '1.25rem',    // 20px - very small screens
-                  sm: '1.5rem',     // 24px - small screens
-                  md: '2rem',       // 32px - medium screens
-                  lg: '2.5rem',     // 40px - large screens
-                  xl: '2.75rem'     // 44px - extra large screens
-                },
-                lineHeight: { xs: 1.1, sm: 1.2, md: 1.3 },
-                mb: { xs: 2, sm: 3, md: 4 },
-                wordBreak: 'break-word',
-                overflowWrap: 'break-word',
-                hyphens: 'auto',
-                maxWidth: '100%',
-                whiteSpace: 'normal',
-                textOverflow: 'clip',
-                transform: 'translateY(30px)', // Reduced initial transform
-                opacity: 0,
-                width: '100%'
+                mb: 2,
+                color: '#000',
+                lineHeight: 1.2
               }}
             >
-              Discover Our Web Development Services
+              Empowering Businesses Through
+            </Typography>
+
+            <Typography
+              variant="h6"
+              sx={{
+                mb: 3,
+                color: '#ffbe01',
+                fontSize: { xs: '2rem', md: '2.5rem' },
+                lineHeight: 1.2,
+                fontWeight: 700
+              }}
+            >
+              Innovative Web Solutions
             </Typography>
 
             <Typography
               variant="body1"
-              component="p"
               sx={{
-                mt: { xs: 1.5, sm: 2, md: 3 },
-                fontSize: {
-                  xs: '0.875rem',   // 14px
-                  sm: '0.95rem',    // 15.2px
-                  md: '1.05rem',    // 16.8px
-                  lg: '1.1rem'      // 17.6px
-                },
-                lineHeight: { xs: 1.3, sm: 1.4, md: 1.5 },
-                mb: { xs: 1.5, sm: 2, md: 3 },
-                wordBreak: 'break-word',
-                overflowWrap: 'break-word',
-                hyphens: 'auto',
-                maxWidth: '100%',
-                px: { xs: 0, sm: 0.5, md: 0 },
-                width: '100%'
+                mb: 4,
+                maxWidth: '700px',
+                mx: 'auto',
+                color: '#666',
+                fontSize: { xs: '0.95rem', md: '1.1rem' },
+                lineHeight: 1.7
               }}
             >
-              <strong>VSoft Solutions is your trusted partner in delivering powerful and custom web development solutions for businesses of all sizes.</strong>
+              Transform your vision into reality with our comprehensive web development services. From responsive websites to complex web applications, we deliver scalable, high-performance solutions that drive business growth.
             </Typography>
 
-            <Typography
-              variant="body1"
-              component="p"
-              sx={{
-                mt: { xs: 1.5, sm: 2, md: 3 },
-                fontSize: {
-                  xs: '0.8125rem',  // 13px
-                  sm: '0.875rem',   // 14px
-                  md: '0.9375rem',  // 15px
-                  lg: '1rem'        // 16px
-                },
-                lineHeight: { xs: 1.3, sm: 1.4, md: 1.5 },
-                mb: { xs: 2.5, sm: 3, md: 4 },
-                wordBreak: 'break-word',
-                overflowWrap: 'break-word',
-                hyphens: 'auto',
-                maxWidth: '100%',
-                px: { xs: 0, sm: 0.5, md: 0 },
-                width: '100%'
-              }}
-            >
-              We specialize in building responsive, secure, and scalable websites and web applications tailored to your unique needs. With a strong focus on user experience and modern technologies, our expert team is committed to crafting seamless digital experiences that drive results. From corporate websites to full-scale e-commerce platforms, VSoft Solutions is your one-stop destination for reliable and innovative web development services.
-            </Typography>
-
+            {/* Buttons */}
             <Box
-              sx={{
-                display: 'flex',
-                justifyContent: { xs: 'center', md: 'flex-start' },
-                mt: { xs: 2.5, sm: 3, md: 4 }
-              }}
+              sx={{ display: 'flex', gap: 3, flexWrap: 'wrap', justifyContent: 'center' }}
             >
               <Button
                 variant="contained"
-                color="secondary"
-                onClick={handleContactClick}
+                size="large"
                 sx={{
-                  backgroundColor: '#ffbd28',
-                  color: '#111',
-                  '&:hover': { backgroundColor: '#ffbf289d' },
-                  borderRadius: '20px',
-                  px: { xs: 2.5, sm: 3, md: 4 },
-                  py: { xs: 1, sm: 1.25, md: 1.5 },
+                  borderRadius: '24px',
+                  px: 4,
+                  py: 1.5,
                   fontWeight: 'bold',
-                  fontSize: { xs: '0.8125rem', sm: '0.875rem', md: '1rem' },
-                  minWidth: { xs: '120px', sm: '140px' }
+                  color: '#111',
+                  backgroundColor: '#ffbd28',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 4px 15px rgba(128, 48, 130, 0.3)',
+                  '&:hover': {
+                    backgroundColor: '#ffbf28c5',
+                    boxShadow: '0 6px 20px rgba(128, 48, 130, 0.4)',
+                    transform: 'translateY(-2px)',
+                  },
                 }}
+                onClick={handleContactClick}
               >
-                Contact Us
+                Get Started
               </Button>
             </Box>
           </Box>
@@ -579,7 +527,7 @@ const WebDevlop = () => {
       <Box
         sx={{
           py: { xs: 6, md: 8 },
-          backgroundColor: '#f4f4f4',
+          backgroundColor: '#fefce8',
           maxWidth: '100%',
           overflow: 'hidden'
         }}
@@ -631,7 +579,6 @@ const WebDevlop = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     borderRadius: 4,
-                    backgroundColor: 'background.paper',
                     transition: 'transform 0.3s',
                     '&:hover': {
                       transform: 'translateY(-8px)',
@@ -656,7 +603,7 @@ const WebDevlop = () => {
                         justifyContent: 'center',
                         alignItems: 'center',
                         borderRadius: 3,
-                        backgroundColor: '#f5f7ff',
+                        backgroundColor: '#ffbe01',
                         overflow: 'hidden'
                       }}
                     >
@@ -668,7 +615,7 @@ const WebDevlop = () => {
                           height: { xs: 80, md: 100 },
                           width: 'auto',
                           objectFit: 'contain',
-                        }}
+                        }} 
                       />
                     </Box>
 

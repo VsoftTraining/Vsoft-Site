@@ -125,13 +125,13 @@ const StepItem = ({ number, title, description, color, index, isLast }) => {
             }
           }}
         >
-          <Typography 
-            variant="h3" 
-            sx={{ 
-              color: 'white', 
-              fontWeight: 'bold', 
+          <Typography
+            variant="h3"
+            sx={{
+              color: '#000000',
+              fontWeight: 'bold',
               fontSize: { xs: '1.5rem', md: '2rem' },
-              textShadow: '0 2px 4px rgba(0,0,0,0.3)'
+              textShadow: '0 1px 2px rgba(255,255,255,0.5)'
             }}
           >
             {number}
@@ -164,11 +164,11 @@ const StepItem = ({ number, title, description, color, index, isLast }) => {
           pt: { xs: 0, md: 1 }
         }}
       >
-        <Typography 
-          variant="h5" 
-          sx={{ 
-            color: 'white', 
-            mb: 2, 
+        <Typography
+          variant="h5"
+          sx={{
+            color: '#000000',
+            mb: 2,
             fontWeight: 'bold',
             fontSize: { xs: '1.25rem', sm: '1.5rem', md: '1.75rem' },
             lineHeight: 1.2
@@ -177,10 +177,10 @@ const StepItem = ({ number, title, description, color, index, isLast }) => {
           {title}
         </Typography>
         
-        <Typography 
-          variant="body1" 
-          sx={{ 
-            color: '#e0e0e0', 
+        <Typography
+          variant="body1"
+          sx={{
+            color: '#000000',
             lineHeight: 1.6,
             fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
             maxWidth: { xs: '100%', md: '80%' }
@@ -241,25 +241,25 @@ export default function WebDevProcessStepper() {
       number: '01',
       title: 'Strategy & Planning',
       description: 'We begin by understanding your business goals and target audience. Our team creates a comprehensive strategy that includes market research, competitor analysis, and defining the project scope to ensure your website meets both user needs and business objectives.',
-      color: '#FF4081',
+      color: '#ffffff',
     },
     {
       number: '02',
       title: 'Design & Prototype',
       description: 'Our creative team designs intuitive and visually appealing interfaces. We create detailed wireframes, mockups, and interactive prototypes that showcase the user experience, ensuring the design aligns with your brand identity and user expectations.',
-      color: '#4CAF50',
+      color: '#ffffff',
     },
     {
       number: '03',
       title: 'Development & Testing',
       description: 'Using the latest technologies and best practices, we bring the design to life with clean, efficient code. We implement responsive design, optimize for performance, and conduct thorough testing across different devices and browsers.',
-      color: '#00BCD4',
+      color: '#ffffff',
     },
     {
       number: '04',
       title: 'Launch & Support',
       description: 'After final testing and your approval, we launch your website and provide comprehensive training. We offer ongoing maintenance, security updates, performance monitoring, and technical support to ensure your website continues to perform optimally.',
-      color: '#FF9800',
+      color: '#ffffff',
     },
   ];
 
@@ -268,7 +268,7 @@ export default function WebDevProcessStepper() {
       sx={{
         py: { xs: 6, sm: 8, md: 10 },
         px: { xs: 2, sm: 3, md: 4 },
-        background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+       background: 'linear-gradient(135deg, #ffbe01 0%, #ffd84d 50%, #ffbe01 100%)',
         color: 'white',
         minHeight: '100vh',
         position: 'relative',
@@ -311,7 +311,7 @@ export default function WebDevProcessStepper() {
             gutterBottom
             sx={{
               fontSize: { xs: '1.75rem', sm: '2.25rem', md: '2.75rem', lg: '3rem' },
-              background: 'linear-gradient(45deg, #FF4081, #00BCD4, #4CAF50)',
+              background: '#000',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -328,7 +328,7 @@ export default function WebDevProcessStepper() {
             ref={subtitleRef}
             variant="h6" 
             sx={{ 
-              color: '#e0e0e0',
+              color: '#000',
               fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' },
               lineHeight: 1.6,
               maxWidth: { xs: '100%', sm: '80%', md: '70%' },
@@ -366,7 +366,7 @@ export default function WebDevProcessStepper() {
             opacity: 0.7
           }}
         >
-          <Typography variant="body2" sx={{ color: '#b0b0b0' }}>
+          <Typography variant="body2" sx={{ color: '#000' }}>
             Ready to start your project? Let's build something amazing together.
           </Typography>
         </Box>

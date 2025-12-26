@@ -13,7 +13,6 @@ const PageTitleUpdater = () => {
       '/services/website-development': 'Website Development',
       '/services/app-development': 'App Development',
       '/services/digital-marketing': 'Digital Marketing',
-      '/services/wordpress-development': 'WordPress Development',
       '/services/ui-ux-design': 'UI/UX Design',
       '/career': 'Careers',
       '/culture': 'Our Culture',

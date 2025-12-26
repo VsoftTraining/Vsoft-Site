@@ -14,7 +14,6 @@ import { Routes, Route } from 'react-router-dom'; // Remove BrowserRouter here
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
 import DigitalMarketing from './pages/DigitalMarketing';
-import WordPress from './pages/WordPress';
 import UiUx from './pages/UiUx';
 import StepUp from './pages/StepUp';
 import CareersPage from './pages/CareersPage';
@@ -26,9 +25,10 @@ import Internship from './pages/Internship';
 import StepUpSAP from './pages/StepUpSAP';
 import StepUpCloud from './pages/StepUpCloud'; 
 // import PromotionalPopup from './Animations/PromotionalPopup';
-import Product from './pages/Product';
+// import Product from './pages/Product';
 import Pricing from './pages/Pricing';
 import PageTitleUpdater from './pages/PageTitleUpdater';
+import { Helmet } from 'react-helmet-async';
 import HomeTvl from './pages/HomeTvl';
 import TermsAndConditions from './pages/TermsAndConditions';
 
@@ -98,19 +98,18 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/website-development" element={<WebDevlop />} />
           <Route path="/app-development" element={<ApplicationDevelopment />} />
-          <Route path="digital-marketing" element={<DigitalMarketing />} />
-          <Route path="wordpress-development" element={<WordPress />} />
-          <Route path='/ui-ux-design' element={<UiUx />} ></Route>
-          <Route path='/career' element={<CareersPage />} ></Route>
-          <Route path="/culture" element={<OurCulture />} > </Route>
-          <Route path="/jobportal" element={< JobSlide/>}> </Route>
-          <Route path="/internship" element={< Internship/>}></Route>
-          <Route path="/vstepup" element={< StepUp/>}></Route>
-          <Route path="/stepupsap" element={< StepUpSAP/>}></Route>
-          <Route path="/stepupcloud" element={< StepUpCloud/>}></Route>
-          <Route path='/pricing' element={<Pricing/>}></Route>
+          <Route path="/digital-marketing" element={<DigitalMarketing />} />
+          <Route path="/ui-ux-design" element={<UiUx />} />
+          <Route path="/career" element={<CareersPage />} />
+          <Route path="/culture" element={<OurCulture />} />
+          <Route path="/jobportal" element={<JobSlide />} />
+          <Route path="/internship" element={<Internship />} />
+          <Route path="/vstepup" element={<StepUp />} />
+          <Route path="/stepupsap" element={<StepUpSAP />} />
+          <Route path="/stepupcloud" element={<StepUpCloud />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/software-company-in-tirunelveli" element={<HomeTvl />} />
-          <Route path="/product" element={<Product />} />
+          {/* <Route path="/product" element={<Product />} /> */}
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         </Routes>
         <FloatingIcons />

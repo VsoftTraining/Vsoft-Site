@@ -13,6 +13,8 @@ import {
   Avatar,
   styled
 } from '@mui/material';
+import SEO from '../components/SEO';
+import { Helmet } from 'react-helmet-async';
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -47,7 +49,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    color: '#ffffff',
+    color: '#000',
 
     '&::before': {
       content: '""',
@@ -56,7 +58,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
       left: 0,
       right: 0,
       bottom: 0,
-      backgroundColor: 'rgba(122, 51, 122, 0.75)',
+      backgroundColor: 'rgba(255, 190, 1, 0.75)',
       zIndex: 0,
     },
   },
@@ -71,11 +73,15 @@ const AboutSection = styled(Box)(({ theme }) => ({
   },
 }));
 
-const PurpleText = styled('span')({
+const PurpleText = styled('span')(({ theme }) => ({
   color: '#ffbe01',
   fontWeight: 900,
   fontSize: '2.5rem',
-});
+
+  [theme.breakpoints.down('md')]: {
+    color: '#000',
+  },
+}));
 
 const ServiceCard = styled(Card)(({ theme }) => ({
   background: 'white',
@@ -139,22 +145,18 @@ const HomePage = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // Hero animation - immediate animation, no scroll trigger
+      // Hero animation - subtle enhancement animation for LCP optimization
       gsap.fromTo(animationRefs.heroHeading.current,
         {
-          opacity: 0,
-          y: isMobile ? 50 : 80,
-          scale: isMobile ? 0.9 : 0.8,
-          rotationX: isMobile ? 20 : 45,
+          y: isMobile ? 20 : 30,
+          scale: isMobile ? 0.98 : 0.95,
         },
         {
-          opacity: 1,
           y: 0,
           scale: 1,
-          rotationX: 0,
-          duration: 2,
+          duration: 1.5,
           ease: 'power3.out',
-          delay: 0.3,
+          delay: 0.2,
         }
       );
 
@@ -302,7 +304,15 @@ const HomePage = () => {
 
   return (
     <>
-      {/* Hero Section */}
+      <SEO
+        title="VSoft Solutions | Leading Software Company in Tirunelveli"
+        description="Transform your business with VSoft Solutions - Tirunelveli's premier software development company. We offer web development, mobile apps, digital marketing, and UI/UX design services."
+        keywords="software company tirunelveli, web development tirunelveli, mobile app development, digital marketing services, UI/UX design, IT solutions"
+      />
+      <Helmet>
+        <link rel="preload" href={heroLaptopImage} as="image" type="image/webp" fetchPriority="high" />
+      </Helmet>
+      {/* Hero Section - LCP Critical Content */}
       <HeroSection>
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, overflow: 'hidden' }}>
           <Box sx={{
@@ -310,20 +320,27 @@ const HomePage = () => {
             flexDirection: { xs: 'column-reverse', md: 'row' },
             alignItems: 'center',
             gap: 2,
+            minHeight: { xs: 'auto', md: '60vh' }
           }}>
-            <Box sx={{ flex: 1 }}>
-              <Typography variant="subtitle1" gutterBottom>
+            <Box sx={{ flex: 1, position: 'relative', zIndex: 2 }}>
+              <Typography variant="subtitle1" gutterBottom sx={{ opacity: 1, color: '#000', fontWeight: 'bold' }}>
                 We are a creative
               </Typography>
-              <Typography 
-                variant="h3" 
+              <Typography
+                variant="h3"
                 gutterBottom
                 fontWeight="bold"
                 ref={animationRefs.heroHeading}
+                sx={{
+                  opacity: 1,
+                  transform: 'translateY(0) scale(1) rotateX(0)',
+                  willChange: 'transform, opacity',
+                  color: '#000'
+                }}
               >
                 Empowering Businesses with <PurpleText>Solutions!</PurpleText>
               </Typography>
-              <Typography variant="body1" paragraph>
+              <Typography variant="body1" paragraph sx={{ opacity: 1, color: '#000', fontWeight: '500' }}>
                 Transform your vision into reality with VSoft Solutions!
               </Typography>
               <Box mt={3}>
@@ -337,8 +354,9 @@ const HomePage = () => {
               <Box
                 component="img"
                 src={heroLaptopImage}
-                alt="Hero interface"
+                alt="Hero interface showcasing VSoft Solutions technology"
                 fetchPriority='high'
+                loading='eager'
                 decoding='async'
                 sx={{
                   width: '100%',

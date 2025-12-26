@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useRef } from 'react';
-import { Helmet } from "react-helmet-async";
+import SEO from '../components/SEO';
 import {
   Box,
   Container,
@@ -281,19 +281,12 @@ const HomeTvl = () => {
 
   return (
     <>
-      <Helmet>
-  <title>Vsoft Solutions | Software Company in Tirunelveli</title>
-
-  <meta
-    name="description"
-    content="Looking for the best software company in Tirunelveli? Vsoft offers custom software, web apps, mobile apps, and IT services."
-  />
-
-  <meta
-    name="keywords"
-    content="software company in tirunelveli, it company in tirunelveli, software development company tirunelveli"
-  />
-</Helmet> 
+      <SEO
+        title="VSoft Solutions | Software Company in Tirunelveli"
+        description="Looking for the best software company in Tirunelveli? VSoft offers custom software, web apps, mobile apps, and IT services for businesses across India."
+        keywords="software company in tirunelveli, it company in tirunelveli, software development company tirunelveli, web development tirunelveli"
+        canonical="/software-company-in-tirunelveli"
+      /> 
 
       {/* Hero Section */}
       <HeroSection>

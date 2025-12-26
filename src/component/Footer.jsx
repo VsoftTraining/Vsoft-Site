@@ -77,10 +77,10 @@ const Footer = () => {
                             </Typography>
                             <Stack spacing={1}>
                                 <Link href="/about" underline="hover" color="black">About Us</Link>
-                               <Link href="/servicespage" underline="hover" color="black">Our Services</Link> 
+                                <Link href="/servicespage" underline="hover" color="black">Our Services</Link> 
                                 <Link href="/career" underline="hover" color="black">Career</Link>
                                 <Link href="/contact" underline="hover" color="black">Contact Us</Link>
-                                <Link href="#" underline="hover" color="black">Terms & Conditions</Link>
+                                <Link href="/terms-and-conditions" underline="hover" color="black">Terms & Conditions</Link>
                             </Stack>
                         </Box>
                     </Grid>

@@ -11,6 +11,7 @@ import {
     useMediaQuery,
     useTheme,
 } from '@mui/material';
+import SEO from '../components/SEO';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import WhyApp from '../assets/whyusapp.avif';
@@ -214,101 +215,149 @@ const ApplicationDevelopment = () => {
 
     return (
         <>
+            <SEO
+                title="Mobile App Development | VSoft Solutions"
+                description="Expert mobile app development services for Android and iOS. Custom mobile applications, cross-platform development using React Native and Flutter. Transform your business with VSoft Solutions."
+                keywords="mobile app development, android app development, ios app development, react native, flutter development"
+                canonical="/app-development"
+            />
+            {/* Hero Section */}
             <Box
                 sx={{
-                    py: 10,
-                    color: '#fff',
-                    textAlign: 'center',
-                    backgroundImage: `url(${AppBack})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
+                    py: { xs: 8, md: 12 },
+                    backgroundColor: '#ffffff',
                     position: 'relative',
-                    overflow: 'hidden', // Prevent horizontal overflow
+                    overflow: 'hidden',
                 }}
             >
-                {/* Overlay for opacity */}
-                <Box
-                    sx={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '100%',
-                        backgroundColor: 'rgba(36, 22, 36, 0.5)',
-                        zIndex: 1,
-                    }}
-                />
-                {/* Content Above Overlay */}
-                <Container
-                    maxWidth="lg"
-                    sx={{
-                        position: 'relative',
-                        zIndex: 2,
-                        overflow: 'hidden' // Prevent content overflow
-                    }}
-                >
+                <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, overflow: 'hidden' }}>
                     {/* Breadcrumbs */}
                     <Breadcrumbs
-                        separator={<NavigateNextIcon fontSize="small" sx={{ color: '#fff' }} />}
+                        separator={<NavigateNextIcon fontSize="small" sx={{ color: '#666' }} />}
                         aria-label="breadcrumb"
-                        sx={{ justifyContent: 'center', display: 'flex', mb: 2 }}
+                        sx={{ justifyContent: 'center', display: 'flex', mb: 4 }}
                     >
                         <Link
                             underline="hover"
                             onClick={() => navigate('/')}
-                            sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', color: '#fff' }}
-                        >
-                            <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-                            Home
-                        </Link>
-                        <Typography
-                            color="#fff"
-                            sx={{ display: 'flex', alignItems: 'center' }}
-                        >
-                            <WebIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-                            Application Development
-                        </Typography>
-                    </Breadcrumbs>
-
-                    {/* Main Text */}
-                    <Typography
-                        variant="h4"
-                        component="h1"
-                        gutterBottom
-                        fontWeight="bold"
-                        ref={heroHeadingRef}
-                        sx={{
-                            transform: `translateY(${isMobile ? '20px' : '50px'})`,
-                            opacity: 0
-                        }}
-                    >
-                        Power Up Your Business with VSoft App Excellence!
-                    </Typography>
-                    <Typography variant="body1" sx={{ mt: 3 }}>
-                        <b>Smart applications. Seamless workflows. Scalable results.</b>
-                    </Typography>
-                    <Typography variant="body1" sx={{ mt: 2 }}>
-                        Looking to transform your business with custom-built software? Our expert application development team creates intuitive, high-performance apps tailored to your goals — from internal tools to customer-facing platforms. We handle it all, from concept to code to continuous support.
-                    </Typography>
-
-                    <Box mt={4} sx={{ display: 'flex', justifyContent: 'flex-start', mb: 2 }}>
-                        <Button
-                            variant="contained"
-                            color="secondary"
-                            onClick={handleContactClick}
                             sx={{
-                                backgroundColor: '#ffbd28',
-                                color: '#000',
-                                '&:hover': { backgroundColor: '#ffbf28d0' },
-                                borderRadius: '20px',
-                                px: 4,
-                                py: 1,
-                                fontWeight: 'bold',
+                                display: 'flex',
+                                alignItems: 'center',
+                                cursor: 'pointer',
+                                color: '#333',
+                                textDecoration: 'none',
+                                fontSize: { xs: '14px', md: '16px' },
+                                '&:hover': { color: '#ffbe01' }
                             }}
                         >
-                            Contact Us
-                        </Button>
+                            <HomeIcon sx={{ mr: 0.5 }} fontSize="small" />
+                            Home
+                        </Link>
+                        <Box sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            color: '#666',
+                            fontSize: { xs: '14px', md: '16px' }
+                        }}>
+                            <WebIcon sx={{ mr: 0.5 }} fontSize="small" />
+                            Application Development
+                        </Box>
+                    </Breadcrumbs>
+
+                    {/* Hero Content */}
+                    <Box sx={{ textAlign: 'center', px: { xs: 2, md: 0 } }}>
+                        <Typography
+                            variant="h4"
+                            component="h1"
+                            fontWeight="bold"
+                            ref={heroHeadingRef}
+                            sx={{
+                                mb: 2,
+                                color: '#000',
+                                lineHeight: 1.2
+                            }}
+                        >
+                            Power Up Your Business with
+                        </Typography>
+
+                        <Typography
+                            variant="h6"
+                            sx={{
+                                mb: 3,
+                                color: '#ffbe01',
+                                fontSize: { xs: '2rem', md: '2.5rem' },
+                                lineHeight: 1.2,
+                                fontWeight: 700
+                            }}
+                        >
+                            VSoft App Excellence!
+                        </Typography>
+
+                        <Typography
+                            variant="body1"
+                            sx={{
+                                mb: 4,
+                                maxWidth: '700px',
+                                mx: 'auto',
+                                color: '#666',
+                                fontSize: { xs: '0.95rem', md: '1.1rem' },
+                                lineHeight: 1.7
+                            }}
+                        >
+                            Smart applications. Seamless workflows. Scalable results. Transform your business with custom-built software solutions that deliver exceptional user experiences and drive growth.
+                        </Typography>
+
+                        {/* Buttons */}
+                        <Box
+                            sx={{ display: 'flex', gap: 3, flexWrap: 'wrap', justifyContent: 'center' }}
+                        >
+                            <Button
+                                variant="contained"
+                                size="large"
+                                sx={{
+                                    borderRadius: '24px',
+                                    px: 4,
+                                    py: 1.5,
+                                    fontWeight: 'bold',
+                                    color: '#111',
+                                    backgroundColor: '#ffbd28',
+                                    transition: 'all 0.3s ease',
+                                    boxShadow: '0 4px 15px rgba(128, 48, 130, 0.3)',
+                                    '&:hover': {
+                                        backgroundColor: '#ffbf28c5',
+                                        boxShadow: '0 6px 20px rgba(128, 48, 130, 0.4)',
+                                        transform: 'translateY(-2px)',
+                                    },
+                                }}
+                                onClick={handleContactClick}
+                            >
+                                Get Started
+                            </Button>
+
+                            <Button
+                                variant="outlined"
+                                size="large"
+                                sx={{
+                                    borderRadius: '24px',
+                                    px: 4,
+                                    py: 1.5,
+                                    fontWeight: 'bold',
+                                    color: '#ffbe01',
+                                    transition: 'all 0.3s ease',
+                                    backgroundColor: "black",
+                                    '&:hover': {
+                                        backgroundColor: 'rgba(128, 48, 130, 0.1)',
+                                        borderColor: '#ffbe01',
+                                        color: "#000",
+                                        transform: 'translateY(-2px)',
+                                        boxShadow: '0 4px 15px rgba(128, 48, 130, 0.2)',
+                                    },
+                                }}
+                                href="#services"
+                            >
+                                View Services
+                            </Button>
+                        </Box>
                     </Box>
                 </Container>
             </Box>

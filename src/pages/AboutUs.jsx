@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { useLayoutEffect } from 'react';
+import SEO from '../components/SEO';
 import {
     Box,
     Container,
@@ -257,6 +258,12 @@ const AboutUs = () => {
 
     return (
         <>
+            <SEO
+                title="About VSoft Solutions | Leading Software Development Company"
+                description="Learn about VSoft Solutions - a trusted software development company in Tirunelveli. Discover our mission, vision, and commitment to delivering innovative digital solutions."
+                keywords="about vsoft solutions, software company tirunelveli, company mission, software development company"
+                canonical="/about"
+            />
             <style jsx global>{`
             html, body {
             overflow-x: hidden;

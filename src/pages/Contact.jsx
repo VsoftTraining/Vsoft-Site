@@ -1,16 +1,17 @@
 import React, { useState, useRef, useLayoutEffect, useEffect } from 'react';
 import {
-    Box,
-    Button,
-    Container,
-    Step,
-    StepLabel,
-    Stepper,
-    TextField,
-    Typography,
-    useMediaQuery,
+  Box,
+  Button,
+  Container,
+  Step,
+  StepLabel,
+  Stepper,
+  TextField,
+  Typography,
+  useMediaQuery,
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import SEO from '../components/SEO';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -283,6 +284,12 @@ const Contact = () => {
 
     return (
         <Container maxWidth="md" ref={containerRef}>
+            <SEO
+                title="Contact VSoft Solutions | Get In Touch Today"
+                description="Ready to transform your business? Contact VSoft Solutions for custom software development, web development, mobile apps, and digital marketing services in Tirunelveli."
+                keywords="contact vsoft solutions, software development contact, web development services contact"
+                canonical="/contact"
+            />
             <Box py={6}>
                 <Typography 
                     variant="h4" 

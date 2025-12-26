@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import SEO from '../components/SEO';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   Box,
@@ -450,6 +451,12 @@ const ServicesPage = () => {
 
   return (
     <Box>
+      <SEO
+        title="Our Services | VSoft Solutions - Software Development Services"
+        description="Explore our comprehensive software development services including web development, mobile app development, digital marketing, and UI/UX design. Transform your business with VSoft Solutions."
+        keywords="web development services, mobile app development, digital marketing, UI/UX design, software development services"
+        canonical="/servicespage"
+      />
       {/* Hero Section */}
       <Box
         ref={heroRef}
@@ -587,7 +594,7 @@ const ServicesPage = () => {
                 Get Started
               </Button>
 
-              <Button
+              {/* <Button
                 className="animated-button"
                 variant="outlined"
                 size="large"
@@ -607,10 +614,10 @@ const ServicesPage = () => {
                     boxShadow: '0 4px 15px rgba(128, 48, 130, 0.2)',
                   },
                 }}
-                href="/servicespage"
+                href="/pricing"
               >
                 View Pricing
-              </Button>
+              </Button> */}
             </Box>
           </Box>
         </Container>
@@ -724,7 +731,7 @@ const ServicesPage = () => {
             description="We create visually stunning designs that communicate your brand message with clarity and impact. Our creative team delivers modern, high-quality graphics that enhance your brand identity and attract your target audience."
             services={graphicServices}
             technologies={graphicsTools}
-            link="/graphics-design"
+            link="/ui-ux-design"
           />
         </Container>
       </Box>

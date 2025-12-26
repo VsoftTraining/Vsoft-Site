@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
+import SEO from '../components/SEO';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   Box,
@@ -526,115 +527,149 @@ const UiUx = () => {
 
   return (
     <>
+      <SEO
+        title="UI/UX Design Services | VSoft Solutions"
+        description="Professional UI/UX design services by VSoft Solutions. Create intuitive and visually stunning user interfaces for web and mobile applications. User-centered design approach."
+        keywords="UI/UX design, user interface design, user experience design, web design, mobile app design"
+        canonical="/ui-ux-design"
+      />
+      {/* Hero Section */}
       <Box
         sx={{
-          py: 10,
-          color: '#fff',
-          textAlign: 'center',
-          backgroundImage: `url(${DesignerUi})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
+          py: { xs: 8, md: 12 },
+          backgroundColor: '#ffffff',
           position: 'relative',
           overflow: 'hidden',
         }}
       >
-        {/* Overlay for opacity */}
-        <Box
-          sx={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(122, 51, 122, 0.75)',
-            zIndex: 1,
-          }}
-        />
-        {/* Content Above Overlay */}
-        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
+        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, overflow: 'hidden' }}>
           {/* Breadcrumbs */}
-          <Box
-            ref={heroBreadcrumbRef}
-            sx={{
-              transform: `translateY(${isMobile ? '-20px' : '-30px'})`,
-              opacity: 0
-            }}
+          <Breadcrumbs
+            separator={<NavigateNextIcon fontSize="small" sx={{ color: '#666' }} />}
+            aria-label="breadcrumb"
+            sx={{ justifyContent: 'center', display: 'flex', mb: 4 }}
           >
-            <Breadcrumbs
-              separator={<NavigateNextIcon fontSize="small" sx={{ color: '#fff' }} />}
-              aria-label="breadcrumb"
-              sx={{ justifyContent: 'center', display: 'flex', mb: 2 }}
-            >
-              <Link
-                underline="hover"
-                onClick={() => navigate('/')}
-                sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', color: '#fff' }}
-              >
-                <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-                Home
-              </Link>
-              <Typography
-                color="#fff"
-                sx={{ display: 'flex', alignItems: 'center' }}
-              >
-                <WebIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-                UI/UX Design
-              </Typography>
-            </Breadcrumbs>
-          </Box>
-
-          {/* Main Text */}
-          <Typography 
-            variant="h4" 
-            fontWeight="bold" 
-            ref={heroHeadingRef}
-            sx={{
-              transform: `translateY(${isMobile ? '60px' : '100px'}) scale(${isMobile ? 0.8 : 0.7})`,
-              opacity: 0
-            }}
-          >
-            Smart Interfaces. Intuitive Journeys. UI/UX That Works by VSoft.
-          </Typography>
-          
-          <Box
-            ref={heroDescRef}
-            sx={{
-              transform: 'translateY(40px) scale(0.9)',
-              opacity: 0
-            }}
-          >
-            <Typography variant="body1" sx={{ mt: 3 }}>
-              <b>We design user-centric, visually stunning interfaces that deliver seamless experiences - turning clicks into customers and ideas into impact, all crafted with care by VSoft Solutions.</b>
-            </Typography>
-          </Box>
-
-          <Box 
-            mt={4} 
-            sx={{ 
-              display: 'flex', 
-              justifyContent: { xs: 'center', md: 'flex-start' }, 
-              mb: 2,
-              transform: 'translateY(30px) scale(0.7)',
-              opacity: 0
-            }}
-            ref={heroButtonRef}
-          >
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={handleContactClick}
+            <Link
+              underline="hover"
+              onClick={() => navigate('/')}
               sx={{
-                backgroundColor: '#ffbd28',
-                '&:hover': { backgroundColor: '#ffbf28d0' },
-                borderRadius: '20px',
-                px: 4,
-                py: 1,
-                fontWeight: 'bold',
+                display: 'flex',
+                alignItems: 'center',
+                cursor: 'pointer',
+                color: '#333',
+                textDecoration: 'none',
+                fontSize: { xs: '14px', md: '16px' },
+                '&:hover': { color: '#ffbe01' }
               }}
             >
-              Contact Us
-            </Button>
+              <HomeIcon sx={{ mr: 0.5 }} fontSize="small" />
+              Home
+            </Link>
+            <Box sx={{
+              display: 'flex',
+              alignItems: 'center',
+              color: '#666',
+              fontSize: { xs: '14px', md: '16px' }
+            }}>
+              <WebIcon sx={{ mr: 0.5 }} fontSize="small" />
+              UI/UX Design
+            </Box>
+          </Breadcrumbs>
+
+          {/* Hero Content */}
+          <Box sx={{ textAlign: 'center', px: { xs: 2, md: 0 } }}>
+            <Typography
+              variant="h4"
+              component="h1"
+              fontWeight="bold"
+              ref={heroHeadingRef}
+              sx={{
+                mb: 2,
+                color: '#000',
+                lineHeight: 1.2
+              }}
+            >
+              Smart Interfaces. Intuitive Journeys.
+            </Typography>
+
+            <Typography
+              variant="h6"
+              sx={{
+                mb: 3,
+                color: '#ffbe01',
+                fontSize: { xs: '2rem', md: '2.5rem' },
+                lineHeight: 1.2,
+                fontWeight: 700
+              }}
+            >
+              UI/UX That Works!
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{
+                mb: 4,
+                maxWidth: '700px',
+                mx: 'auto',
+                color: '#666',
+                fontSize: { xs: '0.95rem', md: '1.1rem' },
+                lineHeight: 1.7
+              }}
+            >
+              We design user-centric, visually stunning interfaces that deliver seamless experiences. Turning clicks into customers and ideas into impact, all crafted with care by VSoft Solutions.
+            </Typography>
+
+            {/* Buttons */}
+            <Box
+              sx={{ display: 'flex', gap: 3, flexWrap: 'wrap', justifyContent: 'center' }}
+            >
+              <Button
+                variant="contained"
+                size="large"
+                sx={{
+                  borderRadius: '24px',
+                  px: 4,
+                  py: 1.5,
+                  fontWeight: 'bold',
+                  color: '#111',
+                  backgroundColor: '#ffbd28',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 4px 15px rgba(128, 48, 130, 0.3)',
+                  '&:hover': {
+                    backgroundColor: '#ffbf28c5',
+                    boxShadow: '0 6px 20px rgba(128, 48, 130, 0.4)',
+                    transform: 'translateY(-2px)',
+                  },
+                }}
+                onClick={handleContactClick}
+              >
+                Get Started
+              </Button>
+
+              <Button
+                variant="outlined"
+                size="large"
+                sx={{
+                  borderRadius: '24px',
+                  px: 4,
+                  py: 1.5,
+                  fontWeight: 'bold',
+                  color: '#ffbe01',
+                  transition: 'all 0.3s ease',
+                  backgroundColor: "black",
+                  '&:hover': {
+                    backgroundColor: 'rgba(128, 48, 130, 0.1)',
+                    borderColor: '#ffbe01',
+                    color: "#000",
+                    transform: 'translateY(-2px)',
+                    boxShadow: '0 4px 15px rgba(128, 48, 130, 0.2)',
+                  },
+                }}
+                href="#services"
+              >
+                View Services
+              </Button>
+            </Box>
           </Box>
         </Container>
       </Box>

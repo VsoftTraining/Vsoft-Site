@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import SEO from '../components/SEO';
 import './OurCulture.css';
 import {
   Box,
   Container,
   Typography,
+  Button,
   Breadcrumbs,
   Grid,
   Link
@@ -239,68 +241,126 @@ const OurCulture = () => {
 
   return (
     <div className="culture-container">
+      <SEO
+        title="Our Culture | VSoft Solutions - Work. Laugh. Grow."
+        description="Discover the vibrant culture at VSoft Solutions. Experience our work environment, team activities, celebrations, and commitment to fostering creativity, innovation, and professional growth."
+        keywords="company culture, work environment, team activities, vsoft solutions culture"
+        canonical="/culture"
+      />
+      {/* Hero Section */}
       <Box
         sx={{
-          py: 10,
-          color: '#fff',
-          height: '550px',
-          textAlign: 'center',
-          backgroundImage: `url(${OfcTeam})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
+          py: { xs: 8, md: 12 },
+          backgroundColor: '#ffffff',
           position: 'relative',
+          overflow: 'hidden',
         }}
       >
-        {/* Overlay */}
-        <Box
-          sx={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            backgroundColor: 'rgba(36, 22, 36, 0.5)',
-            zIndex: 1,
-          }}
-        />
-        {/* Content Above Overlay */}
-        <Container sx={{ position: 'relative', zIndex: 2 }}>
+        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, overflow: 'hidden' }}>
+          {/* Breadcrumbs */}
           <Breadcrumbs
-            separator={<NavigateNextIcon fontSize="small" sx={{ color: '#fff' }} />}
+            separator={<NavigateNextIcon fontSize="small" sx={{ color: '#666' }} />}
             aria-label="breadcrumb"
-            sx={{ justifyContent: 'center', display: 'flex', mb: 2 }}
+            sx={{ justifyContent: 'center', display: 'flex', mb: 4 }}
           >
             <Link
               underline="hover"
               onClick={() => navigate('/')}
-              sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', color: '#fff' }}
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                cursor: 'pointer',
+                color: '#333',
+                textDecoration: 'none',
+                fontSize: { xs: '14px', md: '16px' },
+                '&:hover': { color: '#ffbe01' }
+              }}
             >
-              <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+              <HomeIcon sx={{ mr: 0.5 }} fontSize="small" />
               Home
             </Link>
-            <Typography color="#fff" sx={{ display: 'flex', alignItems: 'center' }}>
-              <WebIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+            <Box sx={{
+              display: 'flex',
+              alignItems: 'center',
+              color: '#666',
+              fontSize: { xs: '14px', md: '16px' }
+            }}>
+              <WebIcon sx={{ mr: 0.5 }} fontSize="small" />
+              Our Culture
+            </Box>
+          </Breadcrumbs>
+
+          {/* Hero Content */}
+          <Box sx={{ textAlign: 'center', px: { xs: 2, md: 0 } }}>
+            <Typography
+              variant="h4"
+              component="h1"
+              fontWeight="bold"
+              ref={headingRef}
+              sx={{
+                mb: 2,
+                color: '#000',
+                lineHeight: 1.2
+              }}
+            >
               Our Culture
             </Typography>
-          </Breadcrumbs>
-          <Typography
-            variant="h2"
-            fontWeight="bold"
-            ref={headingRef}
-          >
-            Our Culture
-          </Typography>
-          <Typography variant="body1" ref={subHeadingRef} paragraph>
-            Work. Laugh. Grow.
-          </Typography>
-          <Typography
-            variant="h6"
-            gutterBottom
-            ref={descRef}
-          >
-            At VSoft Solutions, we celebrate ideas, nurture talent, and grow together as one.
-          </Typography>
+
+            <Typography
+              variant="h6"
+              sx={{
+                mb: 3,
+                color: '#ffbe01',
+                fontSize: { xs: '2rem', md: '2.5rem' },
+                lineHeight: 1.2,
+                fontWeight: 700
+              }}
+            >
+              Work. Laugh. Grow.
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{
+                mb: 4,
+                maxWidth: '700px',
+                mx: 'auto',
+                color: '#666',
+                fontSize: { xs: '0.95rem', md: '1.1rem' },
+                lineHeight: 1.7
+              }}
+            >
+              At VSoft Solutions, we celebrate ideas, nurture talent, and grow together as one. Our vibrant culture fosters creativity, collaboration, and continuous learning in an environment where every team member can thrive and make a meaningful impact.
+            </Typography>
+
+            {/* Buttons */}
+            <Box
+              sx={{ display: 'flex', gap: 3, flexWrap: 'wrap', justifyContent: 'center' }}
+            >
+              <Button
+                variant="contained"
+                size="large"
+                sx={{
+                  borderRadius: '24px',
+                  px: 4,
+                  py: 1.5,
+                  fontWeight: 'bold',
+                  color: '#111',
+                  backgroundColor: '#ffbd28',
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 4px 15px rgba(128, 48, 130, 0.3)',
+                  '&:hover': {
+                    backgroundColor: '#ffbf28c5',
+                    boxShadow: '0 6px 20px rgba(128, 48, 130, 0.4)',
+                    transform: 'translateY(-2px)',
+                  },
+                }}
+                href="/career"
+              >
+                Join Our Team
+              </Button>
+            </Box>
+          </Box>
         </Container>
       </Box>
 
