@@ -27,8 +27,6 @@ import StepUpCloud from './pages/StepUpCloud';
 // import PromotionalPopup from './Animations/PromotionalPopup';
 // import Product from './pages/Product';
 import Pricing from './pages/Pricing';
-import PageTitleUpdater from './pages/PageTitleUpdater';
-import { Helmet } from 'react-helmet-async';
 import HomeTvl from './pages/HomeTvl';
 import TermsAndConditions from './pages/TermsAndConditions';
 
@@ -89,7 +87,6 @@ function App() {
       
         <Header />
         <ScrollToTop />
-        <PageTitleUpdater />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
