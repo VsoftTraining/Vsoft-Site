@@ -32,8 +32,8 @@ import internshipTuti from '../assets/tuti-interns.webp';
 const OurCulture = () => {
   const [selectedPost, setSelectedPost] = useState(null);
   const [likedPosts, setLikedPosts] = useState(new Set());
-  const vsoftPurple = '#803082';
-  const vsoftGray = '#999999';
+  const VSoftPurple = '#803082';
+  const VSoftGray = '#999999';
   const headingRef = useRef();
   const subHeadingRef = useRef();
   const descRef = useRef();
@@ -88,7 +88,7 @@ const OurCulture = () => {
       id: 1,
       title: "Women's Day 2025",
       image: WomensDay,
-      author: "Vsoft",
+      author: "VSoft",
       authorAvatar: DP,
       likes: 45,
       comments: 12,
@@ -100,7 +100,7 @@ const OurCulture = () => {
       id: 2,
       title: "Fun Friday",
       image: FunFriday,
-      author: "Vsoft",
+      author: "VSoft",
       authorAvatar: DP,
       likes: 78,
       comments: 32,
@@ -112,23 +112,23 @@ const OurCulture = () => {
       id: 3,
       title: "Cloud Internship",
       image: CloudInternship,
-      author: "Vsoft",
+      author: "VSoft",
       authorAvatar: DP,
       likes: 67,
       comments: 23,
-      description: "Learning, Growing, and creating an impact every day at Vsoft Solutions! Cloud Internship!.",
-      tags: ["#Cloud", "#cloudintership", "#Internship", "#Excellence"],
+      description: "Learning, Growing, and creating an impact every day at VSoft Solutions! Cloud Internship!.",
+      tags: ["#Cloud", "#cloudinternship", "#Internship", "#Excellence"],
       category: "awards"
     },
     {
       id: 4,
       title: "Full Stack Internship",
       image: CultureSix,
-      author: "Vsoft",
+      author: "VSoft",
       authorAvatar: DP,
       likes: 79,
       comments: 13,
-      description: "Internship Completed! St. John’s College student shines in Fullstack Development.",
+      description: "Internship Completed! St. John’s College student shines in Full Stack Development.",
       tags: ["#react", "#php", "#HTML&CSS", "#fullstack", "#Internship", "#Excellence"],
       category: "certification"
     },
@@ -136,24 +136,24 @@ const OurCulture = () => {
       id: 5,
       title: "SAP Training Workshop",
       image: SAP,
-      author: "Vsoft",
+      author: "VSoft",
       authorAvatar: DP,
       likes: 89,
       comments: 21,
-      description: "Successfully completed our SAP training workshop! Empowring our team with cutting-edge knowledge and skills. A very good session to initiate a creative technologies into Vsoft solutions at Tirunlveli !",
+      description: "Successfully completed our SAP training workshop! Empowering our team with cutting-edge knowledge and skills. A very good session to initiate a creative technologies into VSoft solutions at Tirunelveli !",
       tags: ["#SAP", "#Workshop", "#saptechnology", "#Technology"],
       category: "festival"
     },
     {
       id: 6,
-      title: "Intership Alerts",
+      title: "internship Alerts",
       image: CultureOne,
-      author: "Vsoft",
+      author: "VSoft",
       authorAvatar: DP,
       likes: 109,
       comments: 31,
-      description: "INTERSHIP ALERT at Vsoft Solutions! Ready to Move beyond the classroom",
-      tags: ["#fullstack", "#Workshop", "#intership", "#Technology"],
+      description: "INTERNSHIP ALERT at VSoft Solutions! Ready to Move beyond the classroom",
+      tags: ["#fullstack", "#Workshop", "#internship", "#Technology"],
       category: "festival"
     },
 
@@ -161,35 +161,35 @@ const OurCulture = () => {
       id: 7,
       title: "Digital Marketing Internship",
       image: CultureTwo,
-      author: "Vsoft",
+      author: "VSoft",
       authorAvatar: DP,
       likes: 189,
       comments: 61,
-      description: "Intership Milestone Achieved! Proud to have successfully completed a 2 months Digital Marketing internship at Vsoft Solutions.",
-      tags: ["#SEO", "#digitalmarketing", "#metads", "#Technology", '#intership'],
+      description: "Internship Milestone Achieved! Proud to have successfully completed a 2 months Digital Marketing internship at VSoft Solutions.",
+      tags: ["#SEO", "#digitalmarketing", "#metads", "#Technology", '#internship'],
       category: "festival"
     },
     {
       id: 8,
       title: "Full Stack Internship",
       image: CultureFour,
-      author: "Vsoft",
+      author: "VSoft",
       authorAvatar: DP,
       likes: 149,
       comments: 31,
-      description: "Full Stack Internship in Action at @vsoftsolutions!, From whiteboards to real-world applications - our talented interns are learning by doing.",
+      description: "Full Stack Internship in Action at @VSoftsolutions!, From whiteboards to real-world applications - our talented interns are learning by doing.",
       tags: ["#SAP", "#Workshop", "saptechnology", "Technology"],
       category: "festival"
     },
     {
       id: 9,
-      title: "Wordpress Development Internship",
+      title: "WordPress Development Internship",
       image: CultureFive,
-      author: "Vsoft",
+      author: "VSoft",
       authorAvatar: DP,
       likes: 89,
       comments: 68,
-      description: "Intership Achivements Unlocked! Excited to share that I've successfully completed a 15 days Wordpress Development internship at Vsoft Solutions !",
+      description: "internship Achievements Unlocked! Excited to share that I've successfully completed a 15 days WordPress Development internship at VSoft Solutions !",
       tags: ["#wordpress", "#Workshop", "#cms", "#Technology"],
       category: "festival"
     },
@@ -197,7 +197,7 @@ const OurCulture = () => {
       id: 10,
       title: "UI/UX Internship",
       image: internshipTuti,
-      author: "Vsoft",
+      author: "VSoft",
       authorAvatar: DP,
       likes: 74,
       comments: 13,
@@ -244,7 +244,7 @@ const OurCulture = () => {
       <SEO
         title="Our Culture | VSoft Solutions - Work. Laugh. Grow."
         description="Discover the vibrant culture at VSoft Solutions. Experience our work environment, team activities, celebrations, and commitment to fostering creativity, innovation, and professional growth."
-        keywords="company culture, work environment, team activities, vsoft solutions culture"
+        keywords="company culture, work environment, team activities, VSoft solutions culture"
         canonical="/culture"
       />
       {/* Hero Section */}
@@ -495,7 +495,7 @@ const OurCulture = () => {
             position: 'absolute',
             width: '300px',
             height: '300px',
-            background: `${vsoftPurple}22`,
+            background: `${VSoftPurple}22`,
             transform: 'rotate(45deg)',
             top: '-150px',
             left: '-150px',

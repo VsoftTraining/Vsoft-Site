@@ -257,7 +257,7 @@ const CareersPage = () => {
       <SEO
         title="Careers at VSoft Solutions | Join Our Team"
         description="Join VSoft Solutions - a leading software development company in Tirunelveli. Explore career opportunities, internships, and be part of an innovative team shaping the future of technology."
-        keywords="careers vsoft solutions, software jobs tirunelveli, internship opportunities, technology careers"
+        keywords="careers vSoft solutions, software jobs tirunelveli, internship opportunities, technology careers"
         canonical="/career"
       />
       {/* Hero Section */}
@@ -437,7 +437,7 @@ const CareersPage = () => {
               letterSpacing: '0.02em'
             }}
           >
-            Why Vsoft Solutions
+            Why VSoft Solutions
           </Typography>
 
           {/* Navigation Tabs */}
@@ -454,7 +454,7 @@ const CareersPage = () => {
                 '& .MuiTab-root': {
                   color: '#666',
                   fontSize: { xs: '1rem', md: '1.25rem' },
-                  fontWeight: 400,
+                  fontWeight: 800,
                   textTransform: 'none',
                   minWidth: { xs: 80, md: 120 },
                   padding: { xs: '12px 16px', md: '16px 24px' },

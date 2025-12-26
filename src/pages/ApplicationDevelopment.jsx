@@ -209,7 +209,7 @@ const ApplicationDevelopment = () => {
         { name: 'JavaScript', icon: JS },
         { name: 'Node.js', icon: Nodejs },
         { name: 'MongoDB', icon: MongoDB },
-        { name: 'BootStrap', icon: Bootstrap },
+        { name: 'Bootstrap', icon: Bootstrap },
         { name: 'MUI', icon: Mui },
     ]
 

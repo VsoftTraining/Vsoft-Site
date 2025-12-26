@@ -116,7 +116,7 @@ const Footer = () => {
                     <Grid item xs={12} sm={6} md={3}>
                         <Box display="flex" flexDirection="column" gap={2}>
                             <Typography variant="h6" color="black" fontWeight="bold">
-                                Social Medias
+                                Social Media
                             </Typography>
                             <Stack spacing={1} color="black">
                                 <a
@@ -160,7 +160,7 @@ const Footer = () => {
                 {/* Footer Bottom Text */}
                 <Box mt={6} textAlign="center" borderTop="1px solid #ddd" pt={3}>
                     <Typography variant="body2">
-                        © 2025 Vsoft Solutions. All rights reserved.
+                        © 2025 VSoft Solutions. All rights reserved.
                     </Typography>
                 </Box>
             </Container>

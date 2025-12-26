@@ -25,6 +25,9 @@ import Mission from '../assets/mission.webp';
 import ClientLogoSlider from '../Animations/ClientLogoSlider';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -69,19 +72,19 @@ const AboutUs = () => {
             iconTransform: 'scale(1.5)'
         },
         {
-            id: 3,
-            title: "On Time Delivery",
-            description: "Projects delivered as promised.",
-            icon: (props) => <SupportIcon {...props} />,
-            iconTransform: 'scale(1.5) rotate(15deg)'
-        },
-        {
-            id: 3,
-            title: "End-to-End Support",
-            description: "Support from start to finish.",
-            icon: (props) => <SupportIcon {...props} />,
-            iconTransform: 'scale(1.5) rotate(15deg)'
-        }
+    id: 3,
+    title: "On Time Delivery",
+    description: "Projects delivered as promised.",
+    icon: (props) => <AccessTimeIcon {...props} />,
+    iconTransform: 'scale(1.5) rotate(15deg)'
+},
+{
+    id: 4,
+    title: "End-to-End Support",
+    description: "Support from start to finish.",
+    icon: (props) => <SupportAgentIcon {...props} />,
+    iconTransform: 'scale(1.5) '
+}
     ];
 
     useLayoutEffect(() => {
@@ -389,7 +392,7 @@ const AboutUs = () => {
                                         mb: 1,
                                     }}
                                 >
-                                    We are <span style={{ color: vsoftYellow, fontSize: '4rem' }}>V</span>soft Solution
+                                    We are <span style={{ color: vsoftYellow, fontSize: '4rem' }}>V</span>Soft Solution
                                 </Typography>
                             </Box>
                         </Grid>

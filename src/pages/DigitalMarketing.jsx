@@ -27,6 +27,7 @@ import GoogleAds from '../assets/GoogleAds.webp';
 import ContentMarketing from '../assets/ContentMarketing.webp';
 import CreativeDesign from '../assets/Creative-design.webp';
 import Explainer from '../assets/Explainervideo.webp';
+import Seo from  '../assets/Seo.jpg'
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -350,7 +351,7 @@ const DigitalMarketing = () => {
     },
     {
       id: 5,
-      img: SEO,
+      img: Seo,
       title: 'SEO & Local SEO',
       description: "Climb to the top of search engines with smart SEO strategies that drive organic traffic and local visibility. Perfect for businesses targeting a specific city or region.",
       points: [

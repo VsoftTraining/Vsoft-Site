@@ -546,7 +546,7 @@ const ServicesPage = () => {
                 lineHeight: 1.7
               }}
             >
-              From concept to completion - we deliver innovative solutions that drive growth
+              From concept to completion - we deliver innovative solutions that drive growth .
             </Typography>
 
             <Typography

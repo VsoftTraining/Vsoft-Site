@@ -95,7 +95,7 @@ const Internship = () => {
       category: 'design',
       platforms: ['Canva Premium', 'Figma'],
       skills: ['Design Principles', 'Brand Identity', 'UI/UX', 'Print Design'],
-      duration: '1 months',
+      duration: '1 month',
       level: 'Internship/ Course',
       description: 'Create stunning designs for all industries using professional design tools.',
       features: ['Portfolio creation', 'Client projects', 'Design thinking'],
@@ -685,7 +685,7 @@ const Internship = () => {
               sx={{ display: 'flex', alignItems: 'center' }}
             >
               <WebIcon sx={{ mr: 1 }} fontSize="inherit" />
-              Intership & Courses
+              Internship & Courses
             </Typography>
           </Breadcrumbs>
           <div style={styles.headerText}>

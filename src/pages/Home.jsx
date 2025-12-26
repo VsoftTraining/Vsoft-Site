@@ -450,7 +450,7 @@ const HomePage = () => {
               Checkout Our Service Here
             </Typography>
             <Typography variant="h5" mb={2}>
-              <b>Innovative Software development & Digital Marketing</b>
+              <b>Innovative Software Development & Digital Marketing</b>
             </Typography>
             <Typography variant="body1" maxWidth="sm" mx="auto">
               At VSoft Solutions, we specialize in delivering powerful, scalable, and fully customized software solutions tailored to elevate your business. Our mission is to blend technology with creativity to craft impactful digital experiences.
@@ -506,10 +506,10 @@ const HomePage = () => {
         <Container maxWidth="lg">
           <Box textAlign="center" mb={4}>
             <Typography variant="h3" fontWeight="bold" ref={animationRefs.whatWeDoHeading} gutterBottom>
-              What We Do !
+              What We Do!
             </Typography>
             <Typography variant="body1">
-              we partner with businesses of all sizes to create impactful digital solutions. From startups to enterprises,
+              We partner with businesses of all sizes to create impactful digital solutions. From startups to enterprises,
               we help brands grow through software development, digital marketing, and UI/UX design tailored to their unique needs.
             </Typography>
           </Box>

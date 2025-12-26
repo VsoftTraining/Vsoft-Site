@@ -74,23 +74,53 @@ const Contact = () => {
         });
     };
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-        setErrors({ ...errors, [e.target.name]: '' });
-    };
+   const handleChange = (e) => {
+    const { name, value } = e.target;
 
-    const validateStep = (step) => {
-        let newErrors = {};
-        if (step === 0) {
-            if (!formData.name) newErrors.name = 'Name is required';
-            if (!formData.email) newErrors.email = 'Email is required';
-            if (!formData.phone) newErrors.phone = 'Phone is required';
+    // Allow only numbers for phone
+    if (name === 'phone') {
+        if (!/^\d*$/.test(value)) return; // block alphabets & symbols
+        if (value.length > 10) return;     // block more than 10 digits
+    }
+
+    setFormData({ ...formData, [name]: value });
+    setErrors({ ...errors, [name]: '' });
+};
+
+
+ const validateStep = (step) => {
+    let newErrors = {};
+
+    if (step === 0) {
+        // Name
+        if (!formData.name.trim()) {
+            newErrors.name = 'Name is required';
         }
-        if (step === 1) {
-            if (!formData.message) newErrors.message = 'Message is required';
+
+        // Email
+        if (!formData.email.trim()) {
+            newErrors.email = 'Email is required';
+        } else if (!/^[^\s@]+@[^\s@]+\.com$/.test(formData.email)) {
+            newErrors.email = 'Enter a valid email (example@gmail.com)';
         }
-        return newErrors;
-    };
+
+        // Phone
+        if (!formData.phone.trim()) {
+            newErrors.phone = 'Phone number is required';
+        } else if (!/^\d{10}$/.test(formData.phone)) {
+            newErrors.phone = 'Phone number must be exactly 10 digits';
+        }
+    }
+
+    if (step === 1) {
+        if (!formData.message.trim()) {
+            newErrors.message = 'Message is required';
+        }
+    }
+
+    return newErrors;
+};
+
 
     const animateStepTransition = (callback) => {
         gsap.to(formContainerRef.current, {
@@ -425,7 +455,7 @@ const Contact = () => {
                     mb={4}
                     ref={addToBottomTextRefs}
                 >
-                    We offer reliable, creative, and budget-friendly solutions to help your business grow and thrive. Partner with us to get your projects developed on time and within your budget estimate – without compromising on quality
+                    We offer reliable, creative, and budget-friendly solutions to help your business grow and thrive. Partner with us to get your projects developed on time and within your budget estimate – without compromising on quality.
                 </Typography>
             </Box>
         </Container>

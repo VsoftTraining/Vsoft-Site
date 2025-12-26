@@ -511,7 +511,7 @@ const UiUx = () => {
     {
       icon: <SpeedIcon sx={{ fontSize: 40, color: "#111" }} />,
       title: "Implementation Support",
-      description: "We work closely with developers to ensure design integrity throughout the development process."
+      description: "We support developers to keep the design intact."
     }
   ];
 
