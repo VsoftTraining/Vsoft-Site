@@ -460,7 +460,7 @@ const AboutUs = () => {
                     </Box>
 
                     {/* Content on the right */}
-                    <Box ref={visionContentRef} sx={{ flex: 1 }}>
+                    <Box ref={visionContentRef} sx={{ flex: 2 }}>
                         <Typography variant="h4" fontWeight="bold" gutterBottom>
                             Our Vision
                         </Typography>

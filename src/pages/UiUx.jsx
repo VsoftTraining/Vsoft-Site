@@ -475,7 +475,7 @@ const UiUx = () => {
     },
     {
       name: "Sketch",
-      description: "Create pixel-perfect user interfaces and reusable design components with ease."
+      description: "Build pixel-perfect interfaces using reusable design components with ease  ."
     },
     {
       name: "Adobe Photoshop",
@@ -808,7 +808,7 @@ const UiUx = () => {
                       width: 80,
                       height: 80,
                       borderRadius: '50%',
-                      backgroundColor: 'white',
+                      backgroundColor: '#ffbd28',
                       display: 'flex',
                       justifyContent: 'center',
                       alignItems: 'center',
