@@ -333,7 +333,7 @@ const ApplicationDevelopment = () => {
                             >
                                 Get Started
                             </Button>
-
+{/* 
                             <Button
                                 variant="outlined"
                                 size="large"
@@ -356,7 +356,7 @@ const ApplicationDevelopment = () => {
                                 href="#services"
                             >
                                 View Services
-                            </Button>
+                            </Button> */}
                         </Box>
                     </Box>
                 </Container>

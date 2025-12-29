@@ -843,7 +843,7 @@ const ServicesPage = () => {
                 bgcolor: 'linear-gradient(135deg, #FEF3C7 0%, #FEF9C3 50%, #FED7AA 100%)',
                 // border: '3px solid #ffbe01',
                 position: 'relative',
-                overflow: 'visible',
+                overflow: 'hidden',
                 transition: 'all 0.3s ease',
                 '&:hover': {
                   transform: 'translateY(-4px)',
@@ -866,7 +866,7 @@ const ServicesPage = () => {
 
               <CardContent sx={{ position: 'relative', zIndex: 1 }}>
                 {/* Avatar and Info */}
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                <Box sx={{ display: 'flex',  wordBreak: 'break-word',alignItems: 'center', mb: 3}}>
                   <Avatar
                     src={feedbackData[currentIndex]?.avatar || ''}
                     alt={feedbackData[currentIndex]?.name || ''}
@@ -878,8 +878,10 @@ const ServicesPage = () => {
                       boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                     }}
                   />
-                  <Box>
-                    <Typography variant="h5" fontWeight="bold" sx={{ color: '#333' }}>
+                  <Box sx={{ minWidth: 0 }}>
+                    <Typography variant="h5" fontWeight="bold" sx={{ color: '#333', whiteSpace: 'normal',
+        wordBreak: 'break-word',
+        overflowWrap: 'anywhere', }}>
                       {feedbackData[currentIndex]?.name || ''}
                     </Typography>
                     <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>

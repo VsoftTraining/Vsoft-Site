@@ -30,7 +30,7 @@ const CareersPage = () => {
   const [activeTab, setActiveTab] = useState(0);
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
-  const vsoftPurple = '#803082';
+  const vsoftPurple = '#fbbf24';
 
   // Refs for animations
   const heroRef = useRef();

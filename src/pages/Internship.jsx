@@ -29,7 +29,7 @@ const Internship = () => {
       description: 'Master cloud technologies with hands-on experience across AWS, Azure, and Google Cloud Platform.',
       features: ['Real-time projects', 'Industry mentorship', 'Certification preparation'],
       // icon: '☁️',
-      gradient: 'linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)',
+      gradient: '#ffbe01',
       formUrl: 'https://forms.gle/WidzQAmDBqaesEbs6'
     },
     {
@@ -43,7 +43,7 @@ const Internship = () => {
       description: 'Complete SAP BASIS training with introduction to HANA database administration.',
       features: ['Enterprise tools', 'Real SAP environment', 'Job placement support'],
       // icon: '⚡',
-      gradient: 'linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%)',
+      gradient: '#ffbe01',
       formUrl: 'https://forms.gle/WidzQAmDBqaesEbs6',
     
     },
@@ -58,7 +58,7 @@ const Internship = () => {
       description: 'Build native and cross-platform mobile applications for both Android and iOS.',
       features: ['App store deployment', 'Live projects', 'Portfolio development'],
       // icon: '📱',
-      gradient: 'linear-gradient(135deg, #10b981 0%, #14b8a6 100%)',
+      gradient: '#ffbe01',
       formUrl: 'https://forms.gle/WidzQAmDBqaesEbs6'
     },
     {
@@ -72,7 +72,7 @@ const Internship = () => {
       description: 'Complete web development bootcamp covering frontend and backend technologies.',
       features: ['Full-stack projects', 'Modern frameworks', 'Industry best practices'],
       // icon: '💻',
-      gradient: 'linear-gradient(135deg, #f97316 0%, #ef4444 100%)',
+      gradient: '#ffbe01',
       formUrl: 'https://forms.gle/WidzQAmDBqaesEbs6'
     },
     {
@@ -86,7 +86,8 @@ const Internship = () => {
       description: 'Master digital marketing strategies across multiple platforms and channels.',
       features: ['Campaign management', 'Analytics training', 'Certification prep'],
       // icon: '📈',
-      gradient: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+      gradient: '#ffbe01',
+      color :"black",
       formUrl: 'https://forms.gle/WidzQAmDBqaesEbs6'
     },
     {
@@ -100,7 +101,7 @@ const Internship = () => {
       description: 'Create stunning designs for all industries using professional design tools.',
       features: ['Portfolio creation', 'Client projects', 'Design thinking'],
       // icon: '🎨',
-      gradient: 'linear-gradient(135deg, #ec4899 0%, #f43f5e 100%)',
+      gradient: '#ffbe01',
       formUrl: 'https://forms.gle/WidzQAmDBqaesEbs6'
     }
   ];
@@ -110,13 +111,13 @@ const Internship = () => {
       icon: <Star className="w-8 h-8 text-yellow-400" />,
       title: 'Industry Expert Trainers',
       description: 'Learn from professionals with 10+ years of real industry experience',
-      color: 'bg-gradient-to-r from-yellow-400 to-orange-500'
+      // color: 'bg-gradient-to-r from-green-400 to-emerald-500'
     },
     {
       icon: <Trophy className="w-8 h-8 text-blue-400" />,
       title: '95% Placement Rate',
       description: 'Outstanding track record of successful placements in top companies',
-      color: 'bg-gradient-to-r from-blue-400 to-blue-600'
+      // color: 'bg-gradient-to-r from-green-400 to-emerald-500'
     },
     {
       icon: <Briefcase className="w-8 h-8 text-green-400" />,
@@ -163,7 +164,7 @@ const Internship = () => {
       overflowX: 'hidden'
     },
     header: {
-      background: 'linear-gradient(135deg, #1f2937 0%, #2563eb 50%, #14b8a6 100%)',
+      background: '#fbbf24',
       color: 'white',
       padding: '32px 12px',
       position: 'relative',
@@ -188,6 +189,7 @@ const Internship = () => {
       transition: 'all 1s ease-out'
     },
     mainTitle: {
+      color :'black',
       fontSize: 'clamp(1.8rem, 8vw, 4rem)',
       fontWeight: 'bold',
       marginBottom: '8px',
@@ -195,6 +197,7 @@ const Internship = () => {
       wordBreak: 'break-word'
     },
     subtitle: {
+      color :'black',
       fontSize: 'clamp(1.5rem, 6vw, 3.5rem)',
       fontWeight: 'bold',
       marginBottom: '16px',
@@ -202,8 +205,8 @@ const Internship = () => {
       wordBreak: 'break-word'
     },
     badge: {
-      backgroundColor: '#fbbf24',
-      color: 'black',
+      backgroundColor:'black',
+      color: '#fbbf24',
       padding: '8px 16px',
       borderRadius: '9999px',
       fontSize: 'clamp(0.9rem, 3vw, 1.25rem)',
@@ -214,7 +217,7 @@ const Internship = () => {
       position: 'absolute',
       top: '8px',
       right: '8px',
-      backgroundColor: 'rgba(255, 255, 255, 0.2)',
+      backgroundColor: '#fbbf24',
       borderRadius: '8px',
       padding: '8px',
       textAlign: 'center'
@@ -244,12 +247,12 @@ const Internship = () => {
     sectionTitle: {
       fontSize: 'clamp(1.25rem, 4vw, 2rem)',
       fontWeight: 'bold',
-      color: '#803082'
+      color: '#fbbf24'
     },
     sectionTitleText: {
       fontSize: 'clamp(1.25rem, 4vw, 2rem)',
       fontWeight: 'bold',
-      color: '#803082',
+      color:'#fbbf24',
       margin: 0,
       wordBreak: 'break-word'
     },
@@ -279,7 +282,7 @@ const Internship = () => {
     },
     courseHeader: {
       padding: '20px',
-      color: 'white',
+      color: 'black',
       position: 'relative'
     },
     courseHeaderTop: {
@@ -560,8 +563,8 @@ const Internship = () => {
       textAlign: 'center'
     },
     registerCourseBtn: {
-      background: 'linear-gradient(135deg, #9333ea 0%, #2563eb 100%)',
-      color: 'white',
+      background:'#fbbf24',
+      color: 'black',
       fontWeight: 'bold',
       padding: '12px 24px',
       borderRadius: '8px',
@@ -598,7 +601,7 @@ const Internship = () => {
     },
     formModalHeader: {
       background: selectedCourseForForm ? selectedCourseForForm.gradient : 'linear-gradient(135deg, #9333ea 0%, #2563eb 100%)',
-      color: 'white',
+      color: 'black',
       padding: '16px 20px',
       borderRadius: '12px 12px 0 0',
       display: 'flex',
@@ -668,20 +671,20 @@ const Internship = () => {
         <div style={styles.headerOverlay}></div>
         <div style={styles.headerContent}>
           <Breadcrumbs
-            separator={<NavigateNextIcon fontSize="small" sx={{ color: '#fff' }} />}
+            separator={<NavigateNextIcon fontSize="small" sx={{ color: 'black' }} />}
             aria-label="breadcrumb"
             sx={{ justifyContent: 'center', display: 'flex', mb: 1 }}
           >
             <Link
               underline="hover"
               onClick={() => navigate('/career')}
-              sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', color: '#fff' }}
+              sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', color: 'black' }}
             >
               <HomeIcon sx={{ mr: 1 }} fontSize="inherit" />
               Career
             </Link>
             <Typography
-              color="#fff"
+              color="black"
               sx={{ display: 'flex', alignItems: 'center' }}
             >
               <WebIcon sx={{ mr: 1 }} fontSize="inherit" />
@@ -823,7 +826,7 @@ const Internship = () => {
       {selectedCourse && (
         <div style={styles.modal}>
           <div style={styles.modalContent}>
-            <div style={{ ...styles.modalHeader, background: selectedCourse.gradient }}>
+            <div style={{ ...styles.modalHeader, background: selectedCourse.gradient, color: 'black' }}>
               <div style={styles.modalHeaderContent}>
                 <div style={styles.modalIcon}>{selectedCourse.icon}</div>
                 <h2 style={styles.modalTitle}>{selectedCourse.title}</h2>

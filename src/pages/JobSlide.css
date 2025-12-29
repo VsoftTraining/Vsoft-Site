@@ -9,21 +9,19 @@
 
 /* Hero Section */
 .hero-section {
-  position: relative;
-  overflow: hidden;
-  height: 80vh;
-
   background: linear-gradient(
-                rgba(6, 7, 105, 0.6), 
-                rgba(79, 38, 117, 0.6)
-              ),
-              url('../assets/careers.webp');
+    rgba(251, 191, 36, 0.7),
+    rgba(251, 191, 36, 0.7)
+  ),
+  url('../assets/careers.webp');
+
+
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  color: white;
+  color:black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,7 +41,7 @@
 
 .hero-title-gradient {
   margin-bottom: 1.5rem;
-  background: #fff;
+  background: black;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -75,7 +73,7 @@
   position: relative;
   z-index: 10;
   margin-top: -4rem;
-  background: white;
+  background: black;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
@@ -115,12 +113,12 @@
 
 .search-input:focus {
   outline: none;
-  border-color: #6366f1;
+  border-color: #fbbf24;
 }
 
 .search-button {
   border-radius: 0.5rem;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: linear-gradient(135deg, #6366f1, #fbbf24);
   padding: 0.75rem 2rem;
   font-weight: 600;
   color: white;
@@ -201,9 +199,10 @@
 }
 
 .category-button.active {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
-  color: white;
+  background: #fbbf24;
+  color: #111827;
 }
+
 
 .category-button-icon {
   margin-right: 0.75rem;
@@ -348,11 +347,12 @@
 
 .apply-button {
   border-radius: 0.5rem;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+   background: #fbbf24;
+  color: #111827;
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: white;
+  /* color: white; */
   border: none;
   cursor: pointer;
   transition: transform 0.2s;
@@ -504,10 +504,12 @@
 .modal-apply-button {
   width: 100%;
   border-radius: 0.5rem;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+   background: #fbbf24;
+  color: #111827;
+  /* background: linear-gradient(135deg, #6366f1, #fbbf24); */
   padding: 0.75rem 1.5rem;
   font-weight: 600;
-  color: white;
+  /* color: white; */
   border: none;
   cursor: pointer;
   transition: transform 0.2s;

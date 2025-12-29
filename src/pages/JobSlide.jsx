@@ -118,20 +118,20 @@ const JobSlide = () => {
             <div className="hero-section">
                 <div className="hero-content">
                     <Breadcrumbs
-                            separator={<NavigateNextIcon fontSize="small" sx={{ color: '#fff' }} />}
+                            separator={<NavigateNextIcon fontSize="small" sx={{ color: 'black' }} />}
                             aria-label="breadcrumb"
                             sx={{ justifyContent: 'center', display: 'flex', mb: 1 }}
                           >
                             <Link
                               underline="hover"
                               onClick={() => navigate('/career')}
-                              sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', color: '#fff' }}
+                              sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer', color: 'black' }}
                             >
                               <HomeIcon sx={{ mr: 1 }} fontSize="inherit" />
                               Career
                             </Link>
                             <Typography
-                              color="#fff"
+                              color="black"
                               sx={{ display: 'flex', alignItems: 'center' }}
                             >
                               <WebIcon sx={{ mr: 1 }} fontSize="inherit" />

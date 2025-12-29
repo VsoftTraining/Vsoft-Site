@@ -528,7 +528,8 @@ const HomePage = () => {
                   alignItems: 'center',
                   '&:hover': { boxShadow: 6 },
                 }}>
-                  <Avatar src={sector.icon} alt={sector.title} sx={{ width: 60, height: 60, mb: 2 }} />
+                  <Avatar src={sector.icon} alt={sector.title}
+                   sx={{ width: 60, height: 60, mb: 2 }} />
                   <Typography variant="h6" fontWeight="bold">
                     {sector.title}
                   </Typography>

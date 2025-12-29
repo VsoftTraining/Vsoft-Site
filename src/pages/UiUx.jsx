@@ -646,7 +646,7 @@ const UiUx = () => {
                 Get Started
               </Button>
 
-              <Button
+              {/* <Button
                 variant="outlined"
                 size="large"
                 sx={{
@@ -668,7 +668,7 @@ const UiUx = () => {
                 href="#services"
               >
                 View Services
-              </Button>
+              </Button> */}
             </Box>
           </Box>
         </Container>
